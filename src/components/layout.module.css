@@ -1,0 +1,32 @@
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    font-family: sans-serif;
+}
+
+.heading {
+    color: rebeccapurple;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.image {
+    margin-top: 1em;
+}
+
+
+.site-title {
+    font-size: 3rem;
+    color: #6c7d70;
+    font-weight: 500;
+  }
+
+.layout-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+ 

@@ -1,15 +1,32 @@
 import * as React from 'react'
-import Nav from '../components/nav'
+import Nav from '../components/Nav'
+import { container, heading, siteTitle, layoutWrapper } from '../components/layout.module.css'
+import { useStaticQuery, graphql } from 'gatsby'
 
-const Layout = ({ pageTitle, children}) => {
-    return(
-        <main>
-            <title>{pageTitle}</title>
-            <Nav />
-            <h1>{pageTitle}</h1>
-            {children}
+const Layout = ({ pageTitle, children }) => {
+    const data = useStaticQuery(graphql`
+    query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+        siteBuildMetadata {
+          buildTime
+        }
+      }`);
+
+      return (
+        <main className={container}>
+          <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+          <p className={siteTitle}>{data.site.siteMetadata.title}</p>
+          <Nav />
+          <h1 className={heading}>{pageTitle}</h1>
+          {children}
         </main>
-    )
+      )
 }
+
+
 
 export default Layout
