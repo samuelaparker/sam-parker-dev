@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Nav from '../components/Nav'
-import { container, heading, siteTitle, layoutWrapper } from '../components/layout.module.css'
+import { container, heading, siteTitle } from './layout.module.css'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const Layout = ({ pageTitle, children }) => {
@@ -26,7 +26,6 @@ const Layout = ({ pageTitle, children }) => {
         </main>
       )
 }
-
 
 
 export default Layout
