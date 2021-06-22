@@ -1,15 +1,33 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
+import { graphql } from 'gatsby'
 
+const BlogPage = ({ data }) => {
+    console.log(data)
 
-const BlogPage = () => {
-    
     return (
-        <Layout pageTitle="Blog" >
-            <p>This will be the blog template.</p>
-        </Layout>
+      <Layout pageTitle="My Blog Posts">
+        <div>
+        {
+            data.allFile.nodes.map(node => (
+                <p key={node.name}>{node.name}</p>
+            ))
+        }
+        </div>
+      </Layout>
     )
-}
+  }
 
-export default BlogPage
+  export const query = graphql`
+  query {
+    allFile {
+      nodes {
+        name
+      }
+    }
+  }
+  `
+  export default BlogPage
+  
+
 
