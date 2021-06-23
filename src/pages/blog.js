@@ -1,33 +1,46 @@
-import * as React from 'react'
-import Layout from '../components/Layout'
-import { graphql } from 'gatsby'
+import React from "react"
+import { Link, graphql } from "gatsby"
+import Layout from "../components/Layout"
 
-const BlogPage = ({ data }) => {
-    console.log(data)
 
-    return (
-      <Layout pageTitle="My Blog Posts">
-        <div>
-        {
-            data.allFile.nodes.map(node => (
-                <p key={node.name}>{node.name}</p>
-            ))
+
+const BlogIndex = ({ data, location }) => {
+  const { edges: posts } = data.allMdx
+    
+  return (
+    <Layout location={location}>
+      <ul className="blog__list">
+        {posts.map(({ node: post }) => (
+          <li className="blog__list-item" key={post.id}>
+            <Link className="blog__link" to={`${post.frontmatter.slug}`}>
+              <h2>{post.frontmatter.title}</h2>
+              <h4 style={{ lineHeight: "1.7", fontWeight: "normal" }}>
+                {post.frontmatter.preview}
+              </h4>
+              <h4 className="blog__read-more">Read more →</h4>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </Layout>
+  )
+}
+
+export const pageQuery = graphql`
+  query blogIndex {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            preview
+            slug
+          }
         }
-        </div>
-      </Layout>
-    )
-  }
-
-  export const query = graphql`
-  query {
-    allFile {
-      nodes {
-        name
       }
     }
   }
-  `
-  export default BlogPage
-  
+`
 
-
+export default BlogIndex
