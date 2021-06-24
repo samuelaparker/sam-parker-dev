@@ -1,3 +1,8 @@
+//this file will query for MDX files and turn them into blog pages.
+//this createPages API allows us to instruct Gatsby to create additional pages based on the criteria we specify.
+
+
+
 const path = require("path")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -37,6 +42,3 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 }
-
-
-//test
