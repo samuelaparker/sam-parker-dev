@@ -1,3 +1,5 @@
+
+//THIS FILE IS THE TEMPLATE FOR MDX FILES (BLOG POSTS)
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"

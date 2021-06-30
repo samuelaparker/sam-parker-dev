@@ -1,6 +1,6 @@
 import React from "react"
 
-export default ({ children }) => (
+ const blockquote = ({ children }) => (
   <blockquote
     style={{
       borderLeft: "4px solid #DDD",
@@ -12,3 +12,5 @@ export default ({ children }) => (
     {children}
   </blockquote>
 )
+
+export default blockquote;

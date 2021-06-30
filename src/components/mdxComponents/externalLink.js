@@ -1,6 +1,6 @@
 import React from "react"
 
-export default props => {
+const externalLink = props => {
   // for use with internal links
   // comment out for now
   // if (props.href.includes("adamgoth.com") || props.href[0] === "/") {
@@ -12,3 +12,5 @@ export default props => {
     </a>
   )
 }
+
+export default externalLink;

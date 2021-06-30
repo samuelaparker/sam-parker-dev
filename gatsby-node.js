@@ -1,12 +1,10 @@
-//this file will query for MDX files and turn them into blog pages.
-//this createPages API allows us to instruct Gatsby to create additional pages based on the criteria we specify.
 
-
+//THIS FILE QUERIES FOR MDX FILES AND TURNS THEM INTO BLOG PAGES WITH THE createPages API
 
 const path = require("path")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  // destructure the createPage function from the actions object
+  // Destructure the createPage function from the actions object
   const { createPage } = actions
 
   const result = await graphql(`
@@ -28,17 +26,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
-  // create blog post pages
+  // Create blog post pages.
   const posts = result.data.allMdx.edges
 
-  // call `createPage` for each result
+  // you'll call `createPage` for each result
   posts.forEach(({ node }, index) => {
     createPage({
-      path: node.frontmatter.slug,
+      // This is the slug you created before
+      // (or `node.frontmatter.slug`)
+      path: `blog/${node.frontmatter.slug}`,
+      // This component will wrap our MDX content
       component: path.resolve(`./src/components/Posts-Page-Layout.js`),
-      // you can use the values in this context in
+      // You can use the values in this context in
       // our page layout component
       context: { id: node.id },
     })
   })
 }
+
+

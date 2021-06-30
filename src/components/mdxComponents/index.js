@@ -6,7 +6,7 @@ import InlineCode from "./inlineCode"
 import ListItem from "./listitem"
 import Paragraph from "./paragraph"
 
-export default {
+const index = {
   a: props => <ExternalLink {...props} />,
   blockquote: props => <Blockquote {...props} />,
   inlineCode: props => <InlineCode {...props} />,
@@ -56,3 +56,4 @@ function preToCodeBlock(preProps) {
     }
   }
 }
+export default index;

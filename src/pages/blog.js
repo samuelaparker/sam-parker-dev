@@ -1,7 +1,8 @@
+//  THIS PAGE LISTS ALL THE BLOGS
+
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
-
 
 
 const BlogIndex = ({ data, location }) => {

@@ -3,7 +3,7 @@ import Highlight, { defaultProps } from "prism-react-renderer"
 import vsDark from "prism-react-renderer/themes/vsDark"
 import { Line, LineContent, LineNumber } from "./lines"
 
-export default ({ codeString, language /* metastring */ }) => {
+const code = ({ codeString, language /* metastring */ }) => {
   return (
     <Highlight
       {...defaultProps}
@@ -38,3 +38,5 @@ export default ({ codeString, language /* metastring */ }) => {
     </Highlight>
   )
 }
+
+export default code;
