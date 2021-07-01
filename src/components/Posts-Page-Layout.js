@@ -5,13 +5,15 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/Layout"
-import components from "./mdxComponents"
+import components from "./mdxComponents/index"
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
     <Layout>
-      <div style={{ padding: "0 1rem", marginBottom: "10rem" }}>
-        <h1>{mdx.frontmatter.title}</h1>
+      <div style={{ display: "flex", flexDirection: "column", padding: "0 1rem", maxWidth: "750px", margin: "auto"}}>
+        <h1 style={{
+          textAlign: "center",
+        }}>{mdx.frontmatter.title}</h1>
         <h4
           style={{
             color: "gray",
@@ -22,6 +24,7 @@ export default function PageTemplate({ data: { mdx } }) {
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
       </div>
+
     </Layout>
   )
 }
@@ -39,4 +42,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
 

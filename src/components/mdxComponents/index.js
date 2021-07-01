@@ -2,16 +2,19 @@ import React from "react"
 import Blockquote from "./blockquote"
 import Code from "./code"
 import ExternalLink from "./externalLink"
+import H1 from "./h1"
 import InlineCode from "./inlineCode"
 import ListItem from "./listitem"
 import Paragraph from "./paragraph"
 
-const index = {
+
+const components = {
   a: props => <ExternalLink {...props} />,
   blockquote: props => <Blockquote {...props} />,
   inlineCode: props => <InlineCode {...props} />,
   li: props => <ListItem {...props} />,
   p: props => <Paragraph {...props} />,
+  h1: props => <H1 {...props} />,
   pre: preProps => {
     const props = preToCodeBlock(preProps)
     // if there's a codeString and some props, we passed the test
@@ -56,4 +59,4 @@ function preToCodeBlock(preProps) {
     }
   }
 }
-export default index;
+export default components;
