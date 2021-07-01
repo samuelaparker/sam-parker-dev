@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Welcome to samparker.dev",
+    title: "Hello, I'm Sam Parker",
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",

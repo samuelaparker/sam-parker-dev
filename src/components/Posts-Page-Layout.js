@@ -10,16 +10,16 @@ import components from "./mdxComponents/index"
 export default function PageTemplate({ data: { mdx } }) {
   return (
     <Layout>
-      <div style={{ display: "flex", flexDirection: "column", padding: "0 1rem", maxWidth: "750px", margin: "auto"}}>
-        <h1 style={{
-          textAlign: "center",
-        }}>{mdx.frontmatter.title}</h1>
+      <div style={{ display: "flex", flexDirection: "column", maxWidth: "750px", margin: "auto"}}>
+        <div style={{display: "flex", flexDirection: "column", margin: "auto"}}>
+        <h1 >{mdx.frontmatter.title}</h1>
         <h4
           style={{
             color: "gray",
             fontWeight: "normal",
           }}
         >{`${mdx.frontmatter.date} by ${mdx.frontmatter.author}`}</h4>
+        </div>
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>

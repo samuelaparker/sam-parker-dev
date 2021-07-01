@@ -16,7 +16,7 @@ const Layout = ({ pageTitle, children }) => {
           buildTime
         }
       }`);
-
+      
       return (
         <main className={container}>
           <title>{pageTitle} | {data.site.siteMetadata.title}</title>

@@ -8,7 +8,7 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Home">
     <div className={layoutWrapper}>
-      <p>This site is a showcase of my development skills.</p>
+      <p>Welcome</p>
       </div>
       <div>
       <StaticImage className={image} 
