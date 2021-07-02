@@ -1,0 +1,9 @@
+.blog-link {
+    color: black;
+}
+
+.blog-list-wrapper {
+    max-width: 750px;
+    padding-top: 2em;
+    margin: auto;
+}
