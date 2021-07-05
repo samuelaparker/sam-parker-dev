@@ -4,6 +4,8 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { image, layoutWrapper } from '../components/layout.module.css'
 
 const IndexPage = () => {
+
+  
     
   return (
     <Layout pageTitle="Home">
