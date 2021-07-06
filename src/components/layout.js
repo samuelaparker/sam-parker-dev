@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
+import Nav from './Nav'
+import Footer from './Footer'
 import { useStaticQuery, graphql } from 'gatsby'
 import { container, heading, siteTitle, layoutWrapper } from './layout.module.css'
 
