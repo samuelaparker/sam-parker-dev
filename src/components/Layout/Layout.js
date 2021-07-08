@@ -16,7 +16,9 @@ const LayoutWrapper = styled.p`
 const Container = styled.main`
     margin: 0 auto;
     max-width: 1440px;
-    font-family: sans-serif;
+    font-family: stratos, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 `;
 const Heading = styled.h1`
     color: #529361;
@@ -24,9 +26,6 @@ const Heading = styled.h1`
     flex-direction: row;
     justify-content: center;
 `;
-
-
-
 
 
 const Layout = ({ pageTitle, children }) => {

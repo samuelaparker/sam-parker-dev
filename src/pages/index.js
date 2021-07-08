@@ -50,7 +50,6 @@ const IndexPage = () => {
           alt="photo of a beautiful lake in Maine."
         />
       </div>
-
     </Layout>
   )
 }

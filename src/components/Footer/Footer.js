@@ -27,6 +27,7 @@ const FooterText = styled.p`
  `;
 
 const Footer = () => {
+
     return (
         <FooterWrapper>
             <FooterText>This site was created using Gatsby
