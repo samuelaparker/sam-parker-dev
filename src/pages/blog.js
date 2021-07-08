@@ -3,7 +3,20 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
-import { blogLink, blogListWrapper } from './blog.module.css'
+import styled from "styled-components"
+
+const BlogListWrapper = styled.div`
+    max-width: 750px;
+    padding-top: 2em;
+    margin: auto;
+    
+`;
+const BlogLink = styled(props => <Link {...props} />)`
+    color: black;
+    &:hover {
+    color: rgb(92, 92, 92);
+    }
+`;
 
 
 const BlogIndex = ({ data }) => {
@@ -11,21 +24,21 @@ const BlogIndex = ({ data }) => {
   
   return (
     <Layout pageTitle="Blog">
-    <div className={blogListWrapper}>
+    <BlogListWrapper>
       <ul>
         {posts.map(({ node: post }) => (
           <li key={post.id}>
-            <Link className={blogLink} to={`${post.frontmatter.slug}`}>
+            <BlogLink to={`${post.frontmatter.slug}`}>
               <h2>{post.frontmatter.title}</h2>
               <h4 style={{ lineHeight: "1.7", fontWeight: "normal" }}>
                 {post.frontmatter.preview}
               </h4>
               <h4>Read more →</h4>
-            </Link>
+            </BlogLink>
           </li>
         ))}
       </ul>
-      </div>
+    </BlogListWrapper>
     </Layout>
   )
 }

@@ -1,9 +1,0 @@
-.align {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.image {
-    margin-top: 1em;
-}

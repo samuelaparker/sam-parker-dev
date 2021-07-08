@@ -3,9 +3,11 @@ module.exports = {
     title: "Hello, I'm Sam Parker",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    `gatsby-plugin-styled-components`,
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
@@ -20,9 +22,6 @@ module.exports = {
         path: `${__dirname}/blog/`,
       }
     },
-    
     `gatsby-plugin-mdx`,
-    `gatsby-plugin-styled-components`
-    `gatsby-plugin-react-helmet`
   ],
 };
