@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components';
