@@ -4,8 +4,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" 
-import Layout from "."
-import components from "../mdxComponents/index"
+import Layout from "../components/layout"
+import components from "./mdxComponents/index"
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
