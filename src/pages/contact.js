@@ -16,6 +16,7 @@ const ContactPage = () => {
             <ContactWrapper>
             <Contact /> 
             </ContactWrapper>
+         
         </Layout>
         
     )
