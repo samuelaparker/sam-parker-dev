@@ -55,7 +55,7 @@ const Contact = () => {
         document.getElementById("form").submit();
     };
     return (
-        <ContactFormWrapper onSubmit={handleOnSubmit} id="form">
+        <ContactFormWrapper onSubmit={handleOnSubmit} id="form" action="https://getform.io/f/8a0958bf-20c5-4124-9c42-12fb5ba9f15c" method="POST">
             <Helmet>
                 <title>Contact</title>
             </Helmet>
