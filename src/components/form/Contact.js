@@ -45,8 +45,11 @@ const Contact = () => {
 
     // manually trigger reCAPTCHA execution
     const executeCaptcha = function () {
+        // recaptchaInstance.useRef().current.execute();
         recaptchaInstance.execute();
     };
+
+
 
     // executed once the captcha has been verified
     // can be used to post forms, redirect, etc.
@@ -77,15 +80,22 @@ const Contact = () => {
                 <textarea name="message" id="message" rows="5" />
                 <FormButton onClick={executeCaptcha} type="submit">Send</FormButton>
             </FormLabel>
-            <Recaptcha
+            
+            <RecaptchaStyled
                 ref={e => recaptchaInstance = e}
                 sitekey="6LdHi4cbAAAAAFteU3kk_PHpOdij6TzG_5J_um1Q"
                 size="invisible"
                 verifyCallback={verifyCallback}
             />
+               
         </ContactFormWrapper>
     )
 }
+
+
+const RecaptchaStyled = styled(Recaptcha)`
+    visibility: hidden;
+    `;
 
 const ContactFormWrapper = styled.form`
     margin-top: 30px;
@@ -97,10 +107,12 @@ const FormLabel = styled.label`
         display: flex;
         flex-direction: column;
         width: 30vw;
+        min-width: 200px;
     `;
 const FormButton = styled.button`
     text-align: center;
     width: 8vw;
+    min-width: 100px;
     height: 3em;
     margin-top: 0.4em;
     background-color: #597D61;
