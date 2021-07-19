@@ -29,6 +29,7 @@ console.log(data.site.siteMetadata.title)
             {/* <p className={`${siteTitle}  ${layoutWrapper}`}>{data.site.siteMetadata.title}</p> */}
             <LayoutWrapper>{data.site.siteMetadata.title}</LayoutWrapper>
             <Nav />
+            <Spacer />
             {children}
             <Footer />
        </Container>
@@ -36,6 +37,10 @@ console.log(data.site.siteMetadata.title)
 }
 
 export default Layout
+
+const Spacer = styled.div`
+   margin-top: 5em;
+   `;
 
 const LayoutWrapper = styled.p`
     display: flex;

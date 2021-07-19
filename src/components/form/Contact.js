@@ -61,6 +61,9 @@ const Contact = () => {
             <Helmet>
                 <title>Contact</title>
             </Helmet>
+            <FormTitle>
+                Connect with me!
+            </FormTitle>
             <FormLabel>
                 Name
                 <input type="text" name="name" id="name" />
@@ -91,6 +94,9 @@ const Contact = () => {
     )
 }
 
+const FormTitle = styled.h1`
+    font-size: 1.8em;
+`;
 
 const RecaptchaStyled = styled(Recaptcha)`
     visibility: hidden;
