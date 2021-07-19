@@ -50,7 +50,6 @@ const Contact = () => {
     };
 
 
-
     // executed once the captcha has been verified
     // can be used to post forms, redirect, etc.
     const verifyCallback = function (response) {

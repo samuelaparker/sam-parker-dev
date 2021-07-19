@@ -3,16 +3,6 @@ import Layout from '../components/layout';
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components';
 
-const image = {
-    marginTop: '1em'
-}
-
-const Paragraph = styled.p`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-`;
-
 
 const About = () => {
     return (
@@ -28,5 +18,12 @@ const About = () => {
 
 export default About;
 
+const image = {
+    marginTop: '1em'
+}
 
-  
+const Paragraph = styled.p`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+`;

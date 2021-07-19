@@ -10,15 +10,6 @@ The StaticImage component does not support higher-order components, which includ
 libraries such as Emotion and styled-components. The parser relies on being able to identify StaticImage 
 components in the source, and passing them to a function means this is not possible.
 */
-const imageStyle = {
-  marginTop: '1em'
-}
-
-const LayoutWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-`;
 
 const IndexPage = () => {
   return (
@@ -56,3 +47,12 @@ const IndexPage = () => {
 
 export default IndexPage
 
+const imageStyle = {
+  marginTop: '1em'
+}
+
+const LayoutWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+`;
