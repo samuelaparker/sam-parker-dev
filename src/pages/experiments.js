@@ -15,5 +15,3 @@ export default function Experiments() {
 
 //CREATE A GLOBAL HEADING STYLE
 
-
-

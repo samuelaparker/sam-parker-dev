@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import { Link } from 'gatsby'
 import React from 'react';
 
+export const globalColors = {
+    brandGreen: '#529361',
+}
+
 
 export const StyledLink = styled(props => <Link {...props} />)`
     padding-right: 2rem;
@@ -11,3 +15,4 @@ export const StyledLink = styled(props => <Link {...props} />)`
     color: rgb(92, 92, 92);
 }
 `;
+
