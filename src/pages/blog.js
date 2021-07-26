@@ -5,18 +5,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
 
-const BlogListWrapper = styled.div`
-    max-width: 750px;
-    padding-top: 2em;
-    margin: auto;
-    
-`;
-const BlogLink = styled(props => <Link {...props} />)`
-    color: black;
-    &:hover {
-    color: rgb(92, 92, 92);
-    }
-`;
 
 
 const BlogIndex = ({ data }) => {
@@ -61,3 +49,17 @@ export const pageQuery = graphql`
 `
 
 export default BlogIndex
+
+
+const BlogListWrapper = styled.div`
+    max-width: 750px;
+    padding-top: 2em;
+    margin: auto;
+    
+`;
+const BlogLink = styled(props => <Link {...props} />)`
+    color: black;
+    &:hover {
+    color: rgb(92, 92, 92);
+    }
+`;

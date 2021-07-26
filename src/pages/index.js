@@ -33,11 +33,11 @@ const IndexPage = () => {
       </LayoutWrapper>
       <div>
         <StaticImage style={imageStyle}
-          src="../images/maine-coast.jpeg"
+          src="..//assets/images/maine-coast.jpeg"
           alt="photo of the Maine coast."
         />
         <StaticImage style={imageStyle}
-          src="../images/karl-magnuson-oFB97KdJBFk-unsplash.jpg"
+          src="../assets/images/karl-magnuson-oFB97KdJBFk-unsplash.jpg"
           alt="photo of a beautiful lake in Maine."
         />
       </div>

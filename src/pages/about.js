@@ -9,7 +9,7 @@ const About = () => {
         <Layout pageTitle="About Me">
             <Paragraph>Hi, my name is Sam Parker. I'm a developer in NYC and I'm the creator of this site which I built using Gatsby.</Paragraph>
             <StaticImage style={image}
-                src="../images/IMG_6633.JPG"
+                src="../assets/images/IMG_6633.JPG"
                 alt="photo of a beautiful lake in Maine."
             />
         </Layout>
