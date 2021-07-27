@@ -1,10 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
+import Card from '../components/Card'
 import { StyledLink } from '../assets/GlobalStyles'
 import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react'
 import axios from 'axios';
-// const axios = require('axios');
+import styled from 'styled-components'
 
 const URL = 'https://randomuser.me/api/'
 
@@ -16,12 +17,12 @@ const GridExperiment = () => {
 
   useEffect(() => {
     // Make a request for a user with a given ID
-    axios.get(URL,  {
+    axios.get(URL, {
       params: {
-      format: JSON,
-      nat: 'us',
-      results: 10,
-    }
+        format: JSON,
+        nat: 'us',
+        results: 10,
+      }
     })
       .then(function (response) {
         // handle success
@@ -36,13 +37,13 @@ const GridExperiment = () => {
       .then(function () {
         // always executed
       });
-    }, []);
+  }, []);
 
-    console.log('data', personData)
-    
-    return (
-        <Layout>
-        <Helmet
+  console.log('data', personData)
+
+  return (
+    <Layout>
+      <Helmet
         title='grid-experiment'
         meta={[
           {
@@ -56,22 +57,59 @@ const GridExperiment = () => {
           },
         ]}>
       </Helmet>
-        <div>
-            <h1>Grid Experiment</h1>
-            <StyledLink to="/experiments">back</StyledLink>
-           {personData.map((n,i) => {
-             return <div key={i}>
-             <h2>{n.name.first} {n.name.last}</h2>
-             <p>{n.location.city}, {n.location.state}</p>
-             <p>{n.email}</p>
-             </div>
-           })
-           }
-        </div>
-        </Layout>
-    )
+      <div>
+        <h1>Grid Experiment</h1>
+        <StyledGrid>
+          <Card data={personData}> </Card>
+          <Card data={personData}> </Card>
+          <Card data={personData}> </Card>
+          <Card data={personData}> </Card>
+          <Card data={personData}> </Card>
+          <Card data={personData}> </Card>
+          <Card data={personData}> </Card>
+        </StyledGrid>
+
+
+        <StyledLink to="/experiments">back</StyledLink>
+      </div>
+    </Layout>
+  )
 }
 
 export default GridExperiment
 
+
+const StyledGrid = styled.div`
+  --gap: 20px;
+  --min-card-width: 30ch;
+  --cols: 3;
+  --preferred-value: ((var(--min-card-width) * var(--cols) - var(--gap) * 2) - 100%) * 999;
+  display: grid;
+  gap: var(--gap);
+
+  /* Using min() */
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        min(
+          var(--preferred-value),
+          100%),
+        1fr
+      )
+    );
+
+  /* Using clamp() */
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        clamp(
+          33.3333% - var(--gap),
+          var(--preferred-value),
+          100%),
+        1fr
+      )
+    );
+`
 

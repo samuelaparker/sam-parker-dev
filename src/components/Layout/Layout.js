@@ -20,7 +20,6 @@ const Layout = ({ pageTitle, children }) => {
         }
       }`);
 
-console.log(data.site.siteMetadata.title)
     return (
         <Container>
             <Helmet>
