@@ -17,7 +17,7 @@ export default function Card({ firstName, lastName, thumbnail, location }) {
     )
 }
 
-
+//
 // const CardStyled = styled.div`
 //     background-color: lightgrey;
 //     cursor: pointer;
