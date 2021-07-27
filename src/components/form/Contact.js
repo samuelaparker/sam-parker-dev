@@ -21,6 +21,7 @@ const Contact = () => {
             form.reset();
         }
     };
+    console.log(serverState);
     const handleOnSubmit = e => {
         e.preventDefault();
         const form = e.target;
