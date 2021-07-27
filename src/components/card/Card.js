@@ -2,14 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import { globalColors } from '../../assets/GlobalStyles'
 
-export default function Card(props) {
+export default function Card({ firstName, lastName, thumbnail, location }) {
 
+    
     return (
         <StyledItem>
-        {/* {props.data.map((n,i) => {
-            return <div key={n.dob.date}>{n.name.first}, {n.name.last} {n.location.city}, {n.location.state}</div>
-            }
-        )} */}
+            <StyledThumbnailWrapper>
+                <StyledThumbnail src={thumbnail} alt="thumbnail" />
+            </StyledThumbnailWrapper>
+            <h1>{lastName}</h1>
+            <h2>{firstName}</h2>
+            <p>{location.city}, {location.state}</p>
         </StyledItem>
     )
 }
@@ -28,4 +31,14 @@ const StyledItem = styled.div`
   padding: 1.35rem;
   background: ${globalColors.brandGreen};
   border-radius: 4px;
+`
+const StyledThumbnailWrapper = styled.div`
+    display: inline-block;
+
+`
+const StyledThumbnail = styled.img`
+    padding: 0.3rem;
+    max-width: 100%;
+    min-width: 5rem;
+    border-radius: 50%;
 `

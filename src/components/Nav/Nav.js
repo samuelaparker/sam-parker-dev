@@ -14,6 +14,7 @@ const Nav = () => {
                 <NavLinkItem to="/about">About</NavLinkItem>
                 <NavLinkItem to="/blog">Blog</NavLinkItem>
                 <NavLinkItem to="/contact">Contact</NavLinkItem>
+                <NavLinkItem to="/experiments">Experiments</NavLinkItem>
 
             </NavLinkWrapper>
         </nav>

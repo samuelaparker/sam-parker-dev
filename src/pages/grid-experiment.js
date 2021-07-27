@@ -21,7 +21,7 @@ const GridExperiment = () => {
       params: {
         format: JSON,
         nat: 'us',
-        results: 10,
+        results: 12,
       }
     })
       .then(function (response) {
@@ -60,21 +60,24 @@ const GridExperiment = () => {
       <div>
         <h1>Grid Experiment</h1>
         <StyledGrid>
-          <Card data={personData}> </Card>
-          <Card data={personData}> </Card>
-          <Card data={personData}> </Card>
-          <Card data={personData}> </Card>
-          <Card data={personData}> </Card>
-          <Card data={personData}> </Card>
-          <Card data={personData}> </Card>
+        {personData.map(person => (
+            <Card
+              key={person.dob.date}
+              firstName={person.name.first}
+              lastName={person.name.last}
+              thumbnail={person.picture.thumbnail}
+              {...person}
+              ></Card>
+          ))}
         </StyledGrid>
-
 
         <StyledLink to="/experiments">back</StyledLink>
       </div>
     </Layout>
   )
 }
+
+//<Card data={personData}> </Card>
 
 export default GridExperiment
 
