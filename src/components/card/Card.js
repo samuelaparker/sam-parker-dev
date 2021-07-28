@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 export default function Card({ firstName, lastName, thumbnail, location }) {
 
+    
     return (
         <StyledItem>
             <StyledThumbnailWrapper>
