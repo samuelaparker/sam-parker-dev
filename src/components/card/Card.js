@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { globalColors } from '../../assets/GlobalStyles'
 
 export default function Card({ firstName, lastName, thumbnail, location }) {
 

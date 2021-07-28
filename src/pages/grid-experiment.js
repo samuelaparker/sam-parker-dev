@@ -14,6 +14,7 @@ const URL = 'https://randomuser.me/api/'
 const GridExperiment = () => {
 
   const [personData, setPersonData] = useState([])
+  
 
   useEffect(() => {
     // Make a request for a user with a given ID
