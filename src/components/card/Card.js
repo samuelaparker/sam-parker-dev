@@ -14,7 +14,7 @@ export default function Card({ firstName, lastName, thumbnail, location }) {
         </StyledItem>
     )
 }
-
+//
 //
 // const CardStyled = styled.div`
 //     background-color: lightgrey;
