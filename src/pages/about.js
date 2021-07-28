@@ -3,7 +3,6 @@ import Layout from '../components/layout';
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components';
 
-
 const About = () => {
     return (
         <Layout pageTitle="About Me">
