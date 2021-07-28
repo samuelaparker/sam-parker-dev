@@ -77,8 +77,6 @@ const GridExperiment = () => {
   )
 }
 
-//<Card data={personData}> </Card>
-
 export default GridExperiment
 
 
