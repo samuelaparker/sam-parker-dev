@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Nav from '../nav'
-import Footer from '../footer/Footer'
+import Footer from '../footer'
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
@@ -52,6 +52,8 @@ const LayoutWrapper = styled.p`
 const Container = styled.main`
     margin: 0 auto;
     max-width: 1440px;
+    min-height: 100vh;
+    position: relative;
     font-family: stratos, sans-serif;
     font-weight: 400;
     font-style: normal;

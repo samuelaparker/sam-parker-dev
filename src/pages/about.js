@@ -12,6 +12,7 @@ const About = () => {
                 src="../assets/images/IMG_6633.JPG"
                 alt="photo of a beautiful lake in Maine."
             />
+            <Spacer />
         </Layout>
     )
 }
@@ -27,3 +28,7 @@ const Paragraph = styled.p`
     flex-direction: row;
     justify-content: center;
 `;
+
+const Spacer = styled.div`
+   height: 9rem;
+   `;

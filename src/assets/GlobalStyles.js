@@ -7,7 +7,7 @@ export const globalColors = {
 }
 
 
-export const StyledLink = styled(props => <Link {...props} />)`
+export const StyledLinkGlobal = styled(props => <Link {...props} />)`
     padding-right: 2rem;
     text-decoration: none;
     color: black;

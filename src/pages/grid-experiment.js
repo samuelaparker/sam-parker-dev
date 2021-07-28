@@ -1,14 +1,14 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Card from '../components/card'
-import { StyledLink } from '../assets/GlobalStyles'
+import { StyledLinkGlobal } from '../assets/GlobalStyles'
 import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 import styled from 'styled-components'
 
-const URL = 'https://randomuser.me/api/'
 
+const URL = 'https://randomuser.me/api/'
 
 
 const GridExperiment = () => {
@@ -59,6 +59,7 @@ const GridExperiment = () => {
         ]}>
       </Helmet>
       <div>
+        
         <h1>Grid Experiment</h1>
         <StyledGrid>
         {personData.map(person => (
@@ -72,7 +73,7 @@ const GridExperiment = () => {
           ))}
         </StyledGrid>
 
-        <StyledLink to="/experiments">back</StyledLink>
+        <StyledLinkGlobal to="/experiments">back</StyledLinkGlobal>
       </div>
     </Layout>
   )

@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components';
+import Footer from '../components/footer'
 
 /*
 NOTE RE StaticImage plugin:
@@ -30,7 +31,7 @@ const IndexPage = () => {
       </Helmet>
       <LayoutWrapper>
         <p>Welcome</p>
-      </LayoutWrapper>
+        </LayoutWrapper>
       <div>
         <StaticImage style={imageStyle}
           src="..//assets/images/maine-coast.jpeg"
@@ -41,6 +42,9 @@ const IndexPage = () => {
           alt="photo of a beautiful lake in Maine."
         />
       </div>
+      <Spacer>
+      <Footer />
+      </Spacer>
     </Layout>
   )
 }
@@ -48,7 +52,8 @@ const IndexPage = () => {
 export default IndexPage
 
 const imageStyle = {
-  marginTop: '1em'
+  marginTop: '1em',
+  borderRadius: '50%',
 }
 
 const LayoutWrapper = styled.div`
@@ -56,3 +61,7 @@ const LayoutWrapper = styled.div`
     flex-direction: row;
     justify-content: center;
 `;
+
+const Spacer = styled.div`
+   height: 9rem;
+   `;
