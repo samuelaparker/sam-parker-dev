@@ -42,4 +42,3 @@ const StyledThumbnail = styled.img`
     min-width: 5rem;
     border-radius: 50%;
 `
-//
