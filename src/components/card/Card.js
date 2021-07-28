@@ -29,8 +29,9 @@ export default function Card({ firstName, lastName, thumbnail, location }) {
 //`
 const StyledItem = styled.div`
   padding: 1.35rem;
-  background: ${globalColors.brandGreen};
   border-radius: 4px;
+  border: 1rem solid;
+  cursor: grab;
 `
 const StyledThumbnailWrapper = styled.div`
     display: inline-block;
