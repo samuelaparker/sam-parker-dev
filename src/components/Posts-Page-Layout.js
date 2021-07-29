@@ -28,6 +28,7 @@ export default function PageTemplate({ data: { mdx } }) {
     </Layout>
   )
 }
+
 //When your site gets built, Gatsby will run your page query and pass the resulting data into your page component as a prop called data.
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
