@@ -1,18 +1,18 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-// import { globalColors } from '../../assets/GlobalStyles'
+import { globalColors } from '../../assets/GlobalStyles'
 
 
 const Nav = () => {
     return (
         <nav>
             <NavLinkWrapper>
-                <NavLinkItem to="/">Home</NavLinkItem>
-                <NavLinkItem to="/about">About</NavLinkItem>
-                <NavLinkItem to="/blog">Blog</NavLinkItem>
-                <NavLinkItem to="/contact">Contact</NavLinkItem>
-                <NavLinkItem to="/experiments">Experiments</NavLinkItem>
+                <NavLinkItem to="/" activeStyle={{ color: globalColors.brandGreen }}>Home</NavLinkItem>
+                <NavLinkItem to="/about" activeStyle={{ color: globalColors.brandGreen }}>About</NavLinkItem>
+                <NavLinkItem to="/blog" activeStyle={{ color: globalColors.brandGreen }}>Blog</NavLinkItem>
+                <NavLinkItem to="/contact" activeStyle={{ color: globalColors.brandGreen }}>Contact</NavLinkItem>
+                <NavLinkItem to="/experiments" activeStyle={{ color: globalColors.brandGreen }}>Experiments</NavLinkItem>
 
             </NavLinkWrapper>
         </nav>

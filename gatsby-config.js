@@ -2,12 +2,13 @@ module.exports = {
   siteMetadata: {
     title: "Hello, I'm Sam Parker",
   },
+  
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    `gatsby-plugin-styled-components`,
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {

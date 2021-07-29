@@ -14,7 +14,7 @@ const URL = 'https://randomuser.me/api/'
 const GridExperiment = () => {
 
   const [personData, setPersonData] = useState([])
-  
+
 
   useEffect(() => {
     // Make a request for a user with a given ID
@@ -40,8 +40,8 @@ const GridExperiment = () => {
       });
   }, []);
 
-  console.log('data', personData)
-
+  
+  console.log('personData:', personData)
   return (
     <Layout>
       <Helmet
@@ -59,17 +59,17 @@ const GridExperiment = () => {
         ]}>
       </Helmet>
       <div>
-        
         <h1>Grid Experiment</h1>
+        <p>This is an experiment in responsive grid layout without media queries that uses Math() functions. Each card pulls data from a random person API. </p>
         <StyledGrid>
-        {personData.map(person => (
+          {personData.map(person => (
             <Card
               key={person.dob.date}
               firstName={person.name.first}
               lastName={person.name.last}
               thumbnail={person.picture.thumbnail}
               {...person}
-              ></Card>
+            ></Card>
           ))}
         </StyledGrid>
 
