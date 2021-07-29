@@ -38,7 +38,7 @@ const Layout = ({ pageTitle, children }) => {
 export default Layout
 
 const Spacer = styled.div`
-   margin-top: 5em;
+   margin-top: 3em;
    `;
 
 const LayoutWrapper = styled.p`

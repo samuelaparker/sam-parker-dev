@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import axios from "axios";
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
+import { globalColors } from '../../assets/GlobalStyles'
 
 var Recaptcha = require('react-recaptcha');
 
@@ -67,20 +68,20 @@ const Contact = () => {
             </FormTitle>
             <FormLabel>
                 Name
-                <input type="text" name="name" id="name" />
+                <StyledInput type="text" name="name" id="name" />
             </FormLabel>
             <FormLabel>
                 Email
-                <input type="email" name="email" id="email" />
+                <StyledInput type="email" name="email" id="email" />
             </FormLabel>
             <FormLabel>
                 Subject
-                <input type="text" name="subject" id="subject" />
+                <StyledInput type="text" name="subject" id="subject" />
             </FormLabel>
             <input type="hidden" id="captchaResponse" name="g-recaptcha-response"></input>
             <FormLabel>
                 Message
-                <textarea name="message" id="message" rows="5" />
+                <StyledTextArea name="message" id="message" rows="5" />
                 <FormButton onClick={executeCaptcha} type="submit">Send</FormButton>
             </FormLabel>
             
@@ -108,12 +109,14 @@ const ContactFormWrapper = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   `;
 const FormLabel = styled.label`
         display: flex;
         flex-direction: column;
         width: 30vw;
         min-width: 200px;
+        
     `;
 const FormButton = styled.button`
     text-align: center;
@@ -121,14 +124,20 @@ const FormButton = styled.button`
     min-width: 100px;
     height: 3em;
     margin-top: 0.4em;
-    background-color: #597D61;
-    color: white;
-    border-radius: 12px;
     text-decoration: none;
-    border: none;
+    border: .2rem solid;
     &:hover {
-    background-color: rgb(92, 92, 92);
+    background-color: ${globalColors.brandGreen};
     }
+`;
+
+const StyledInput = styled.input`
+    border: .2rem solid;
+    min-height: 25px;
+`;
+
+const StyledTextArea = styled.textarea`
+    border: .2rem solid;
 `;
 
 export default Contact;

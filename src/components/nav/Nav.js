@@ -13,7 +13,6 @@ const Nav = () => {
                 <NavLinkItem to="/blog" activeStyle={{ color: globalColors.brandGreen }}>Blog</NavLinkItem>
                 <NavLinkItem to="/contact" activeStyle={{ color: globalColors.brandGreen }}>Contact</NavLinkItem>
                 <NavLinkItem to="/experiments" activeStyle={{ color: globalColors.brandGreen }}>Experiments</NavLinkItem>
-
             </NavLinkWrapper>
         </nav>
     )

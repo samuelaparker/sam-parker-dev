@@ -41,7 +41,7 @@ const IndexPage = () => {
         ]}>
       </Helmet>
       <LayoutWrapper>
-        <p>Welcome</p>
+        <p></p>
         </LayoutWrapper>
       <div>
         <StaticImage style={imageStyle}
