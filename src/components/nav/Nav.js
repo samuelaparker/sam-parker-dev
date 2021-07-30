@@ -25,9 +25,11 @@ export default Nav
 
 const NavLinkWrapper = styled.li`
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding-left: 0;
     padding: 2rem;
+    
 `;
 
 const NavLinkItem = styled(props => <Link {...props} />)`
