@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Card from '../components/card'
-import { StyledLinkGlobal } from '../assets/GlobalStyles'
 import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react'
 import axios from 'axios';
@@ -73,7 +72,6 @@ const GridExperiment = () => {
           ))}
         </StyledGrid>
         <Spacer></Spacer>
-        <StyledLinkGlobal to="/experiments">back</StyledLinkGlobal>
       </div>
 
     </Layout>
