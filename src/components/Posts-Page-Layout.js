@@ -6,6 +6,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" 
 import Layout from "../components/layout"
 import components from "./mdxComponents/index"
+import styled from "styled-components"
 
 export default function PageTemplate({ data: { mdx } }) {
   return (

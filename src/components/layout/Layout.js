@@ -28,7 +28,7 @@ const Layout = ({ pageTitle, children }) => {
             {/* <p className={`${siteTitle}  ${layoutWrapper}`}>{data.site.siteMetadata.title}</p> */}
             <LayoutWrapper>{data.site.siteMetadata.title}</LayoutWrapper>
             <Nav />
-            <Spacer />
+            <Spacer1 />
             {children}
             <Footer />
        </Container>
@@ -37,7 +37,7 @@ const Layout = ({ pageTitle, children }) => {
 
 export default Layout
 
-const Spacer = styled.div`
+const Spacer1 = styled.div`
    margin-top: 3em;
    `;
 
