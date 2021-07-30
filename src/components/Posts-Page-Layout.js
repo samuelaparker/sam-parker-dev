@@ -24,7 +24,7 @@ export default function PageTemplate({ data: { mdx } }) {
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
       </div>
-
+        <Spacer />
     </Layout>
   )
 }
@@ -44,4 +44,6 @@ export const pageQuery = graphql`
   }
 `
 
-//
+const Spacer = styled.div`
+   height: 9rem;
+   `;

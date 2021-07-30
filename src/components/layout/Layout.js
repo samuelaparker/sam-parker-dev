@@ -64,3 +64,6 @@ const Container = styled.main`
 //     flex-direction: row;
 //     justify-content: center;
 // `;
+const Spacer = styled.div`
+   height: 9rem;
+   `;
