@@ -36,6 +36,7 @@ const NavLinkItem = styled(props => <Link {...props} />)`
     font-size: 1.7em;
     text-decoration: none;
     color: black;
+    
     &:hover {
     color: rgb(92, 92, 92);
 }

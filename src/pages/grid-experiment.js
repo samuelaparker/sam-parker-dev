@@ -72,9 +72,10 @@ const GridExperiment = () => {
             ></Card>
           ))}
         </StyledGrid>
-
+        <Spacer></Spacer>
         <StyledLinkGlobal to="/experiments">back</StyledLinkGlobal>
       </div>
+
     </Layout>
   )
 }
@@ -115,4 +116,7 @@ const StyledGrid = styled.div`
       )
     );
 `
+const Spacer = styled.div`
+   height: 9rem;
+   `;
 
