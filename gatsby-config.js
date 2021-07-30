@@ -4,7 +4,6 @@ module.exports = {
   },
   
   plugins: [
-    `gatsby-plugin-mdx`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-gatsby-cloud",
@@ -18,12 +17,13 @@ module.exports = {
     //   },
     // },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/blog/`,
+        path: `${__dirname}/src/blog/`,
       },
     },
+    `gatsby-plugin-mdx`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -42,4 +42,3 @@ module.exports = {
    },
   ],
 };
-
