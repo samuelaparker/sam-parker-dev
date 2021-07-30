@@ -9,7 +9,6 @@ import styled from 'styled-components'
 
 const URL = 'https://randomuser.me/api/'
 
-
 const GridExperiment = () => {
 
   const [personData, setPersonData] = useState([])
