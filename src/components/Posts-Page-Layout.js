@@ -10,6 +10,7 @@ import styled from "styled-components"
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
+    
     <Layout>
       <div style={{ display: "flex", flexDirection: "column", maxWidth: "750px", margin: "auto"}}>
         <div style={{display: "flex", flexDirection: "column", margin: "auto"}}>

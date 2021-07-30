@@ -43,18 +43,7 @@ const GridExperiment = () => {
   return (
     <Layout>
       <Helmet
-        title='grid-experiment'
-        meta={[
-          {
-            name: 'Samuel Parker',
-            content: 'grid-experiment - samparker.dev',
-          },
-          {
-            name: 'Sam Parker',
-            content:
-              '',
-          },
-        ]}>
+        title='grid-experiment'>
       </Helmet>
       <div>
         <h1>Grid Experiment</h1>
