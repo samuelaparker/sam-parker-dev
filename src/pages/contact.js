@@ -10,7 +10,7 @@ const ContactPage = () => {
             <div>
                 <Contact/>
             </div>
-           
+           <Spacer />
         </Layout>
         
     )
@@ -18,4 +18,6 @@ const ContactPage = () => {
 
 export default ContactPage
 
-//test
+const Spacer = styled.div`
+   height: 9rem;
+   `;
