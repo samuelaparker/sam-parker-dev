@@ -26,7 +26,7 @@ const Layout = ({ pageTitle, children }) => {
                 <title>{`${pageTitle}`} | {`${data.site.siteMetadata.title}`}</title>
             </Helmet>
             {/* <p className={`${siteTitle}  ${layoutWrapper}`}>{data.site.siteMetadata.title}</p> */}
-            <LayoutWrapper>{data.site.siteMetadata.title}</LayoutWrapper>
+            <StyledTitle>{data.site.siteMetadata.title}</StyledTitle>
             <Nav />
             <Spacer1 />
             {children}
@@ -41,11 +41,11 @@ const Spacer1 = styled.div`
    margin-top: 3em;
    `;
 
-const LayoutWrapper = styled.p`
+const StyledTitle = styled.h1`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-size: 3rem;
+    font-size: clamp(1rem, 10vw, 4rem); 
     color: #529361;
     font-weight: 500;
 `;
@@ -64,6 +64,6 @@ const Container = styled.main`
 //     flex-direction: row;
 //     justify-content: center;
 // `;
-const Spacer = styled.div`
-   height: 9rem;
-   `;
+// const Spacer = styled.div`
+//    height: 9rem;
+//    `;

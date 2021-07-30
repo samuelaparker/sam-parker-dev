@@ -33,7 +33,7 @@ const NavLinkWrapper = styled.li`
 
 const NavLinkItem = styled(props => <Link {...props} />)`
     padding-right: 2rem;
-    font-size: 1.7em;
+    font-size: clamp(0.8rem, 8vw, 1.7rem);
     text-decoration: none;
     color: black;
     
