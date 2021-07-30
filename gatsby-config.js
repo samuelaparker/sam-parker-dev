@@ -21,8 +21,9 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/blog/`,
-      }
+      },
     },
+    `gatsby-plugin-mdx`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -39,6 +40,5 @@ module.exports = {
          args: ``,
       },
    },
-    `gatsby-plugin-mdx`,
   ],
 };
