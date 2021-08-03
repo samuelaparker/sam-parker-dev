@@ -9,6 +9,7 @@ import components from "./mdxComponents/index"
 import styled from "styled-components"
 
 export default function PageTemplate({ data: { mdx } }) {
+  
   return (
     
     <Layout>
