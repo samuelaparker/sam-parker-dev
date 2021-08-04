@@ -1,5 +1,5 @@
 import React from 'react'
-import {Nav} from './Nav'
+import Nav from '../nav'
 
 
 //👇 This default export determines where your story goes in the story list
@@ -12,10 +12,15 @@ export default {
 const Template = (args) => <Nav {...args} />;
 
 
-export const FirstStory = Template.bind({});
+export const Primary = Template.bind({});
+Primary.args = {
+  primary: true,
+  label: 'Nav',
+};
 
-FirstStory.args = {
+Nav.args = {
   /*👇 The args you need here will depend on your component */
+  controls: { hideNoControlsWarning: true },
 };
 
 //
