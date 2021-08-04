@@ -2521,6 +2521,68 @@
     webpack-hot-middleware "^2.25.0"
     webpack-virtual-modules "^0.2.2"
 
+"@storybook/builder-webpack5@^6.3.6":
+  version "6.3.6"
+  resolved "https://registry.yarnpkg.com/@storybook/builder-webpack5/-/builder-webpack5-6.3.6.tgz#3679df2d78b067b8c903fab2cd2523e1e9361ce4"
+  integrity sha512-66Yk3YsvPXRKcBiWLBR3poVTtMSnJW8CmVsFbKHjpP9LZ8qT+YTmLnXhFhZWSzfSAv3dWvKUEyJftuPIxSJl5A==
+  dependencies:
+    "@babel/core" "^7.12.10"
+    "@babel/plugin-proposal-class-properties" "^7.12.1"
+    "@babel/plugin-proposal-decorators" "^7.12.12"
+    "@babel/plugin-proposal-export-default-from" "^7.12.1"
+    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.12.1"
+    "@babel/plugin-proposal-object-rest-spread" "^7.12.1"
+    "@babel/plugin-proposal-optional-chaining" "^7.12.7"
+    "@babel/plugin-proposal-private-methods" "^7.12.1"
+    "@babel/plugin-syntax-dynamic-import" "^7.8.3"
+    "@babel/plugin-transform-arrow-functions" "^7.12.1"
+    "@babel/plugin-transform-block-scoping" "^7.12.12"
+    "@babel/plugin-transform-classes" "^7.12.1"
+    "@babel/plugin-transform-destructuring" "^7.12.1"
+    "@babel/plugin-transform-for-of" "^7.12.1"
+    "@babel/plugin-transform-parameters" "^7.12.1"
+    "@babel/plugin-transform-shorthand-properties" "^7.12.1"
+    "@babel/plugin-transform-spread" "^7.12.1"
+    "@babel/preset-env" "^7.12.11"
+    "@babel/preset-react" "^7.12.10"
+    "@babel/preset-typescript" "^7.12.7"
+    "@storybook/addons" "6.3.6"
+    "@storybook/api" "6.3.6"
+    "@storybook/channel-postmessage" "6.3.6"
+    "@storybook/channels" "6.3.6"
+    "@storybook/client-api" "6.3.6"
+    "@storybook/client-logger" "6.3.6"
+    "@storybook/components" "6.3.6"
+    "@storybook/core-common" "6.3.6"
+    "@storybook/core-events" "6.3.6"
+    "@storybook/node-logger" "6.3.6"
+    "@storybook/router" "6.3.6"
+    "@storybook/semver" "^7.3.2"
+    "@storybook/theming" "6.3.6"
+    "@types/node" "^14.0.10"
+    babel-loader "^8.2.2"
+    babel-plugin-macros "^3.0.1"
+    babel-plugin-polyfill-corejs3 "^0.1.0"
+    case-sensitive-paths-webpack-plugin "^2.3.0"
+    core-js "^3.8.2"
+    css-loader "^5.0.1"
+    dotenv-webpack "^7.0.0"
+    fork-ts-checker-webpack-plugin "^6.0.4"
+    fs-extra "^9.0.1"
+    glob "^7.1.6"
+    glob-promise "^3.4.0"
+    html-webpack-plugin "^5.0.0"
+    react-dev-utils "^11.0.3"
+    stable "^0.1.8"
+    style-loader "^2.0.0"
+    terser-webpack-plugin "^5.0.3"
+    ts-dedent "^2.0.0"
+    util-deprecate "^1.0.2"
+    webpack "^5.9.0"
+    webpack-dev-middleware "^4.1.0"
+    webpack-hot-middleware "^2.25.0"
+    webpack-virtual-modules "^0.4.1"
+
 "@storybook/channel-postmessage@6.3.6":
   version "6.3.6"
   resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-6.3.6.tgz#f29c3678161462428e78c9cfed2da11ffca4acb0"
@@ -2805,6 +2867,47 @@
     webpack "4"
     webpack-dev-middleware "^3.7.3"
     webpack-virtual-modules "^0.2.2"
+
+"@storybook/manager-webpack5@^6.3.6":
+  version "6.3.6"
+  resolved "https://registry.yarnpkg.com/@storybook/manager-webpack5/-/manager-webpack5-6.3.6.tgz#dc0a49e442314b77ea7e33f3f2a735375fca9b4c"
+  integrity sha512-Mn54pn+8bFHSk8vLTu19tzdljCWDmcvAR6CVSyh1O3LXpT5hJ8v9qpskNyUrXVDjH0ydo6xcNbNh1yYCDitAuw==
+  dependencies:
+    "@babel/core" "^7.12.10"
+    "@babel/plugin-transform-template-literals" "^7.12.1"
+    "@babel/preset-react" "^7.12.10"
+    "@storybook/addons" "6.3.6"
+    "@storybook/core-client" "6.3.6"
+    "@storybook/core-common" "6.3.6"
+    "@storybook/node-logger" "6.3.6"
+    "@storybook/theming" "6.3.6"
+    "@storybook/ui" "6.3.6"
+    "@types/node" "^14.0.10"
+    babel-loader "^8.2.2"
+    case-sensitive-paths-webpack-plugin "^2.3.0"
+    chalk "^4.1.0"
+    core-js "^3.8.2"
+    css-loader "^5.0.1"
+    dotenv-webpack "^7.0.0"
+    express "^4.17.1"
+    file-loader "^6.2.0"
+    file-system-cache "^1.0.5"
+    find-up "^5.0.0"
+    fs-extra "^9.0.1"
+    html-webpack-plugin "^5.0.0"
+    node-fetch "^2.6.1"
+    read-pkg-up "^7.0.1"
+    regenerator-runtime "^0.13.7"
+    resolve-from "^5.0.0"
+    style-loader "^2.0.0"
+    telejson "^5.3.2"
+    terser-webpack-plugin "^5.0.3"
+    ts-dedent "^2.0.0"
+    url-loader "^4.1.1"
+    util-deprecate "^1.0.2"
+    webpack "^5.9.0"
+    webpack-dev-middleware "^4.1.0"
+    webpack-virtual-modules "^0.4.1"
 
 "@storybook/node-logger@6.3.6":
   version "6.3.6"
@@ -3785,6 +3888,11 @@ accepts@^1.3.7, accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.7:
   dependencies:
     mime-types "~2.1.24"
     negotiator "0.6.2"
+
+acorn-import-assertions@^1.7.6:
+  version "1.7.6"
+  resolved "https://registry.yarnpkg.com/acorn-import-assertions/-/acorn-import-assertions-1.7.6.tgz#580e3ffcae6770eebeec76c3b9723201e9d01f78"
+  integrity sha512-FlVvVFA1TX6l3lp8VjDnYYq7R1nyW6x3svAt4nDgrWQ9SBaSh9CnbwgSUTasgfNfOG5HlM1ehugCvM+hjo56LA==
 
 acorn-jsx@^5.0.0, acorn-jsx@^5.3.1:
   version "5.3.2"
@@ -6824,6 +6932,13 @@ dotenv-defaults@^1.0.2:
   dependencies:
     dotenv "^6.2.0"
 
+dotenv-defaults@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/dotenv-defaults/-/dotenv-defaults-2.0.2.tgz#6b3ec2e4319aafb70940abda72d3856770ee77ac"
+  integrity sha512-iOIzovWfsUHU91L5i8bJce3NYK5JXeAwH50Jh6+ARUdLiiGlYWfGw6UkzsYqaXZH/hjE/eCd/PlfM/qqyK0AMg==
+  dependencies:
+    dotenv "^8.2.0"
+
 dotenv-expand@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/dotenv-expand/-/dotenv-expand-5.1.0.tgz#3fbaf020bfd794884072ea26b1e9791d45a629f0"
@@ -6835,6 +6950,13 @@ dotenv-webpack@^1.8.0:
   integrity sha512-o8pq6NLBehtrqA8Jv8jFQNtG9nhRtVqmoD4yWbgUyoU3+9WBlPe+c2EAiaJok9RB28QvrWvdWLZGeTT5aATDMg==
   dependencies:
     dotenv-defaults "^1.0.2"
+
+dotenv-webpack@^7.0.0:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/dotenv-webpack/-/dotenv-webpack-7.0.3.tgz#f50ec3c7083a69ec6076e110566720003b7b107b"
+  integrity sha512-O0O9pOEwrk+n1zzR3T2uuXRlw64QxHSPeNN1GaiNBloQFNaCUL9V8jxSVz4jlXXFP/CIqK8YecWf8BAvsSgMjw==
+  dependencies:
+    dotenv-defaults "^2.0.2"
 
 dotenv@^6.2.0:
   version "6.2.0"
@@ -9698,6 +9820,17 @@ html-webpack-plugin@^4.0.0:
     pretty-error "^2.1.1"
     tapable "^1.1.3"
     util.promisify "1.0.0"
+
+html-webpack-plugin@^5.0.0:
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-5.3.2.tgz#7b04bf80b1f6fe84a6d3f66c8b79d64739321b08"
+  integrity sha512-HvB33boVNCz2lTyBsSiMffsJ+m0YLIQ+pskblXgN9fnjS1BgEcuAfdInfXfGrkdXV406k9FiDi86eVCDBgJOyQ==
+  dependencies:
+    "@types/html-minifier-terser" "^5.0.0"
+    html-minifier-terser "^5.0.1"
+    lodash "^4.17.21"
+    pretty-error "^3.0.4"
+    tapable "^2.0.0"
 
 htmlparser2@^3.9.1:
   version "3.10.1"
@@ -13747,6 +13880,14 @@ pretty-error@^2.1.1:
     lodash "^4.17.20"
     renderkid "^2.0.4"
 
+pretty-error@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/pretty-error/-/pretty-error-3.0.4.tgz#94b1d54f76c1ed95b9c604b9de2194838e5b574e"
+  integrity sha512-ytLFLfv1So4AO1UkoBF6GXQgJRaKbiSiGFICaOPNwQ3CMvBvXpLRubeQWyPGnsbV/t9ml9qto6IeCsho0aEvwQ==
+  dependencies:
+    lodash "^4.17.20"
+    renderkid "^2.0.6"
+
 pretty-format@^25.5.0:
   version "25.5.0"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-25.5.0.tgz#7873c1d774f682c34b8d48b6743a2bf2ac55791a"
@@ -14714,7 +14855,7 @@ remove-trailing-separator@^1.0.1:
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
   integrity sha1-wkvOKig62tW8P1jg1IJJuSN52O8=
 
-renderkid@^2.0.4:
+renderkid@^2.0.4, renderkid@^2.0.6:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/renderkid/-/renderkid-2.0.7.tgz#464f276a6bdcee606f4a15993f9b29fc74ca8609"
   integrity sha512-oCcFyxaMrKsKcTY59qnCAtmDVSLfPbrv6A3tVbPdFMMrv5jaK10V6m40cKsoPNhAqN6rmHW9sswW4o3ruSrwUQ==
@@ -16175,7 +16316,7 @@ tapable@^1.0.0, tapable@^1.1.3:
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
   integrity sha512-4WK/bYZmj8xLr+HUCODHGF1ZFzsYffasLUgEiMBY4fgtltdO6B4WJtlSbPaDTLpYTcGVwM2qLnFTICEcNxs3kA==
 
-tapable@^2.0, tapable@^2.1.1, tapable@^2.2.0:
+tapable@^2.0, tapable@^2.0.0, tapable@^2.1.1, tapable@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.0.tgz#5c373d281d9c672848213d0e037d1c4165ab426b"
   integrity sha512-FBk4IesMV1rBxX2tfiK8RAmogtWn53puLOQlvO8XuwlgxcYbP4mVPS9Ph4aeamSyyVjOl24aYWAuc8U5kCVwMw==
@@ -16288,7 +16429,7 @@ terser-webpack-plugin@^4.2.3:
     terser "^5.3.4"
     webpack-sources "^1.4.3"
 
-terser-webpack-plugin@^5.1.1, terser-webpack-plugin@^5.1.3:
+terser-webpack-plugin@^5.0.3, terser-webpack-plugin@^5.1.1, terser-webpack-plugin@^5.1.3:
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-5.1.4.tgz#c369cf8a47aa9922bd0d8a94fe3d3da11a7678a1"
   integrity sha512-C2WkFwstHDhVEmsmlCxrXUtVklS+Ir1A7twrYzrDrQQOIMOaVAYykaoo/Aq1K0QRkMoY2hhvDQY1cm4jnIMFwA==
@@ -17484,6 +17625,11 @@ webpack-sources@^3.1.1:
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.1.1.tgz#586d15bc9a9723765f6a735f672357d6402f9c57"
   integrity sha512-ztUmIWq0LWaw+1YyR3bXtUPjt8vQedtI9WxGn/q1V1ASHsombnaso7MN9S25lzKS/OuC9Q8lEg3GsZexjDbdlQ==
 
+webpack-sources@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.0.tgz#b16973bcf844ebcdb3afde32eda1c04d0b90f89d"
+  integrity sha512-fahN08Et7P9trej8xz/Z7eRu8ltyiygEo/hnRi9KqBUs80KeDcnf96ZJo++ewWd84fEf3xSX9bp4ZS9hbw0OBw==
+
 webpack-stats-plugin@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/webpack-stats-plugin/-/webpack-stats-plugin-1.0.3.tgz#0f64551a0b984b48a9e7acdee32e3cfda556fe51"
@@ -17502,6 +17648,11 @@ webpack-virtual-modules@^0.3.2:
   integrity sha512-RXQXioY6MhzM4CNQwmBwKXYgBs6ulaiQ8bkNQEl2J6Z+V+s7lgl/wGvaI/I0dLnYKB8cKsxQc17QOAVIphPLDw==
   dependencies:
     debug "^3.0.0"
+
+webpack-virtual-modules@^0.4.1:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/webpack-virtual-modules/-/webpack-virtual-modules-0.4.3.tgz#cd597c6d51d5a5ecb473eea1983a58fa8a17ded9"
+  integrity sha512-5NUqC2JquIL2pBAAo/VfBP6KuGkHIZQXW/lNKupLPfhViwh8wNsu0BObtl09yuKZszeEUfbXz8xhrHvSG16Nqw==
 
 webpack@4:
   version "4.46.0"
@@ -17560,6 +17711,36 @@ webpack@^5.35.0:
     terser-webpack-plugin "^5.1.3"
     watchpack "^2.2.0"
     webpack-sources "^3.1.1"
+
+webpack@^5.9.0:
+  version "5.48.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.48.0.tgz#06180fef9767a6fd066889559a4c4d49bee19b83"
+  integrity sha512-CGe+nfbHrYzbk7SKoYITCgN3LRAG0yVddjNUecz9uugo1QtYdiyrVD8nP1PhkNqPfdxC2hknmmKpP355Epyn6A==
+  dependencies:
+    "@types/eslint-scope" "^3.7.0"
+    "@types/estree" "^0.0.50"
+    "@webassemblyjs/ast" "1.11.1"
+    "@webassemblyjs/wasm-edit" "1.11.1"
+    "@webassemblyjs/wasm-parser" "1.11.1"
+    acorn "^8.4.1"
+    acorn-import-assertions "^1.7.6"
+    browserslist "^4.14.5"
+    chrome-trace-event "^1.0.2"
+    enhanced-resolve "^5.8.0"
+    es-module-lexer "^0.7.1"
+    eslint-scope "5.1.1"
+    events "^3.2.0"
+    glob-to-regexp "^0.4.1"
+    graceful-fs "^4.2.4"
+    json-parse-better-errors "^1.0.2"
+    loader-runner "^4.2.0"
+    mime-types "^2.1.27"
+    neo-async "^2.6.2"
+    schema-utils "^3.1.0"
+    tapable "^2.1.1"
+    terser-webpack-plugin "^5.1.3"
+    watchpack "^2.2.0"
+    webpack-sources "^3.2.0"
 
 websocket-driver@>=0.5.1, websocket-driver@^0.7.4:
   version "0.7.4"
