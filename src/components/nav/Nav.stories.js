@@ -11,16 +11,22 @@ export default {
 //👇 We create a “template” of how args map to rendering
 const Template = (args) => <Nav {...args} />;
 
+//one method
+/* export const Primary = () => <Nav /> */
+
 
 export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Nav',
-};
+  Primary.args = {
+    
+  }
 
-Nav.args = {
-  /*👇 The args you need here will depend on your component */
-  controls: { hideNoControlsWarning: true },
-};
+// export const Mobile = Template.bind({});
+// Mobile.args = {
+//   mobile: true,
+// };
 
-//
+
+// Nav.args = {
+//   /*👇 The args you need here will depend on your component */
+//   controls: { hideNoControlsWarning: true },
+// };
