@@ -2,13 +2,14 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { globalColors } from '../../assets/GlobalStyles'
+import PropTypes from 'prop-types';
 
 
-const Nav = () => {
+const Nav = ({testProp}) => {
     return (
         <nav>
             <NavLinkWrapper>
-                <NavLinkItem to="/" activeStyle={{ color: globalColors.brandGreen }}>Home</NavLinkItem>
+                <NavLinkItem testprop={testProp} to="/" activeStyle={{ color: globalColors.brandGreen }}>Home</NavLinkItem>
                 <NavLinkItem to="/about" activeStyle={{ color: globalColors.brandGreen }}>About</NavLinkItem>
                 <NavLinkItem to="/blog" activeStyle={{ color: globalColors.brandGreen }}>Blog</NavLinkItem>
                 <NavLinkItem to="/contact" activeStyle={{ color: globalColors.brandGreen }}>Contact</NavLinkItem>
@@ -17,6 +18,13 @@ const Nav = () => {
         </nav>
     )
 }
+
+Nav.propTypes = {
+   
+    testProp: PropTypes.string,
+
+  };
+  
 
 
 export default Nav
@@ -34,6 +42,7 @@ const NavLinkWrapper = styled.li`
 const NavLinkItem = styled(props => <Link {...props} />)`
     padding-right: 2rem;
     font-size: clamp(0.8rem, 8vw, 1.7rem);
+    font-family: stratos, sans-serif;
     text-decoration: none;
     color: black;
     

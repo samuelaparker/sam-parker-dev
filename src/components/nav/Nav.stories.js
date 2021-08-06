@@ -6,6 +6,12 @@ import Nav from '../nav'
 export default {
   title: 'Nav',
   component: Nav,
+  argTypes: {
+    testProp: {
+      options: ['dingus', 'mcgee'],
+      control: { type: 'radio' }
+    }
+  }
 };
 
 //👇 We create a “template” of how args map to rendering
@@ -17,8 +23,13 @@ const Template = (args) => <Nav {...args} />;
 
 export const Primary = Template.bind({});
   Primary.args = {
-    
+    testProp: 'dingus',
   }
+  export const Secondary = Template.bind({});
+  Secondary.args = {
+    testProp: 'mcgee',
+  }
+
 
 // export const Mobile = Template.bind({});
 // Mobile.args = {
