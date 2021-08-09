@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
 
-
 const Layout = ({ pageTitle, children }) => {
 
     const data = useStaticQuery(graphql`
