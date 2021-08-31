@@ -22,7 +22,7 @@
     "@react-icons/all-files": "^4.1.0",
     "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.13.2",
-    "gatsby": "^3.8.1",
+    "gatsby": "^3.13.0",
     "gatsby-plugin-gatsby-cloud": "^2.8.1",
     "gatsby-plugin-image": "^1.8.0",
     "gatsby-plugin-layout": "^2.8.0",
