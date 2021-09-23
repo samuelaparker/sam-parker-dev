@@ -5,51 +5,51 @@ import { globalColors } from "../../assets/GlobalStyles";
 import PropTypes from "prop-types";
 
 const Nav = ({ testProp }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setIsOpen] = useState(false);
 
   return (
     <nav>
-      <NavLinkWrapper isOpen={isOpen}>
-        <HamburgerWrapper onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}>
-          <Hamburger isOpen={isOpen}>
-            <Top isOpen={isOpen} />
-            <Middle isOpen={isOpen} />
-            <Bottom isOpen={isOpen} />
+      <NavLinkWrapper open={open}>
+        <HamburgerWrapper onClick={() => setIsOpen(!open)} open={open}>
+          <Hamburger open={open}>
+            <Top open={open} />
+            <Middle open={open} />
+            <Bottom open={open} />
           </Hamburger>
         </HamburgerWrapper>
         <NavLinkItem
           testprop={testProp}
           to="/"
           activeStyle={{ color: globalColors.brandGreen }}
-          isOpen={isOpen}
+          open={open}
         >
           Home
         </NavLinkItem>
         <NavLinkItem
           to="/about"
           activeStyle={{ color: globalColors.brandGreen }}
-          isOpen={isOpen}
+          open={open}
         >
           About
         </NavLinkItem>
         <NavLinkItem
           to="/blog"
           activeStyle={{ color: globalColors.brandGreen }}
-          isOpen={isOpen}
+          open={open}
         >
           Blog
         </NavLinkItem>
         <NavLinkItem
           to="/contact"
           activeStyle={{ color: globalColors.brandGreen }}
-          isOpen={isOpen}
+          open={open}
         >
           Contact
         </NavLinkItem>
         <NavLinkItem
           to="/experiments"
           activeStyle={{ color: globalColors.brandGreen }}
-          isOpen={isOpen}
+          open={open}
         >
           Experiments
         </NavLinkItem>
@@ -75,8 +75,8 @@ const NavLinkWrapper = styled.li`
     overflow: hidden;
     transition: max-height 0.3s ease-in;
     width: 100%;
-    flex-direction: ${({ isOpen }) => (isOpen ? "column" : "none")};
-    align-items: ${({ isOpen }) => (isOpen ? "right" : "center")};
+    flex-direction: ${({ open }) => (open ? "column" : "none")};
+    align-items: ${({ open }) => (open ? "right" : "center")};
   }
 `;
 
@@ -91,9 +91,9 @@ const NavLinkItem = styled((props) => <Link {...props} />)`
     color: rgb(92, 92, 92);
   }
   @media (max-width: 920px) {
-    flex-direction: ${({ isOpen }) => (isOpen ? "column" : "none")};
-    display: ${({ isOpen }) => (isOpen ? "block" : "none")};
-    align-items: ${({ isOpen }) => (isOpen ? "stretch" : "center")};
+    flex-direction: ${({ open }) => (open ? "column" : "none")};
+    display: ${({ open }) => (open ? "block" : "none")};
+    align-items: ${({ open }) => (open ? "stretch" : "center")};
   }
 `;
 
@@ -106,12 +106,12 @@ const HamburgerWrapper = styled.div`
   cursor: pointer;
   @media (max-width: 920px) {
     display: flex;
-    margin-top: ${({ isOpen }) => (isOpen ? "1em" : "")};
+    margin-top: ${({ open }) => (open ? "1em" : "")};
   }
 `;
 
 const Hamburger = styled.div`
-  position: ${({ isOpen }) => (isOpen ? "block" : "flex")};
+  position: ${({ open }) => (open ? "block" : "flex")};
   display: flex;
   left: 0;
   flex-direction: column;
@@ -124,7 +124,7 @@ const Hamburger = styled.div`
 `;
 
 const Top = styled.span`
-  transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0)")};
+  transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
 
   @media (max-width: 920px) {
     background: black;
@@ -136,8 +136,8 @@ const Top = styled.span`
   }
 `;
 const Middle = styled.span`
-  display: ${({ isOpen }) => (isOpen ? "none" : "")};
-  transform: ${({ isOpen }) => (isOpen ? "translateX(20px)" : "translateX(0)")};
+  display: ${({ open }) => (open ? "none" : "")};
+  transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
   @media (max-width: 920px) {
     background: black;
     width: 2rem;
@@ -148,7 +148,7 @@ const Middle = styled.span`
   }
 `;
 const Bottom = styled.span`
-  transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0)")};
+  transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
 
   @media (max-width: 920px) {
     background: black;

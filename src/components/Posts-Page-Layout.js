@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" 
 import Layout from "../components/layout"
-import components from "./mdxComponents/index"
+import components from "./mdxComponents"
 import styled from "styled-components"
 
 export default function PageTemplate({ data: { mdx } }) {
@@ -30,6 +30,7 @@ export default function PageTemplate({ data: { mdx } }) {
         <Spacer />
     </Layout>
   )
+  
 }
 
 //When your site gets built, Gatsby will run your page query and pass the resulting data into your page component as a prop called data.
