@@ -4,6 +4,7 @@ import Footer from '../footer'
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
+import { GlobalStyle } from '../../assets/GlobalStyles'
 
 const Layout = ({ pageTitle, children }) => {
 
@@ -22,6 +23,7 @@ const Layout = ({ pageTitle, children }) => {
 
     return (
         <Container>
+          <GlobalStyle />
             <Helmet>
                 <title>{`${pageTitle}`} | {`${data.site.siteMetadata.title}`}</title>
             </Helmet>

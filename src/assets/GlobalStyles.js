@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Link } from 'gatsby'
 import React from 'react';
 
@@ -16,3 +16,24 @@ export const StyledLinkGlobal = styled(props => <Link {...props} />)`
 }
 `;
 
+export const GlobalStyle = createGlobalStyle`
+
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  
+    
+    
+  }
+  html {
+    margin: 0;  
+  }
+`
