@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" 
 import Layout from "../components/layout"
-import components from "./mdxComponents"
+// import components from "./mdxComponents"
 import styled from "styled-components"
 
 export default function PageTemplate({ data: { mdx } }) {
@@ -23,7 +23,7 @@ export default function PageTemplate({ data: { mdx } }) {
           }}
         >{`${mdx.frontmatter.date} by ${mdx.frontmatter.author}`}</h4>
         </div>
-        <MDXProvider components={components}>
+        <MDXProvider>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
       </div>
