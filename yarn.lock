@@ -7927,6 +7927,11 @@ gatsby-plugin-layout@^2.8.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
+gatsby-plugin-mdx-frontmatter@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx-frontmatter/-/gatsby-plugin-mdx-frontmatter-0.0.4.tgz#19cf2ed630f35dc541c2f761e24533809eb89a19"
+  integrity sha512-itdhni+L7oZ9tpyipGVTmC32qcdd+FsWkDqcxnnQ9NCjEMIajPwit6fdzx/Zby1YaKVx6FSqkTp9tjQTde7BpQ==
+
 gatsby-plugin-mdx@^2.8.0:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-2.14.0.tgz#adbbe14820de493eb926ee490019c43df4c7d3f3"

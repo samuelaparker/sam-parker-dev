@@ -2,10 +2,10 @@
 //THIS FILE IS THE TEMPLATE FOR MDX FILES (BLOG POSTS)
 import React from "react"
 import { graphql } from "gatsby"
-// import { MDXProvider } from "@mdx-js/react"
+import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" 
 import Layout from "../components/layout"
-// import components from "./mdxComponents"
+import components from "./mdxComponents"
 import styled from "styled-components"
 
 export default function PageTemplate({ data: { mdx } }) {
@@ -23,9 +23,9 @@ export default function PageTemplate({ data: { mdx } }) {
           }}
         >{`${mdx.frontmatter.date} by ${mdx.frontmatter.author}`}</h4>
         </div>
-        {/* <MDXProvider> */}
+        <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
-        {/* </MDXProvider> */}
+        </MDXProvider>
       </div>
         <Spacer />
     </Layout>

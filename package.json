@@ -27,6 +27,7 @@
     "gatsby-plugin-image": "^1.8.0",
     "gatsby-plugin-layout": "^2.8.0",
     "gatsby-plugin-mdx": "^2.8.0",
+    "gatsby-plugin-mdx-frontmatter": "^0.0.4",
     "gatsby-plugin-react-helmet": "^4.9.0",
     "gatsby-plugin-recaptcha": "^1.0.5",
     "gatsby-plugin-sharp": "^3.8.0",

@@ -23,7 +23,16 @@ module.exports = {
         path: `${__dirname}/src/blog/`,
       },
     },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/blog`,
+      },
+    },
     `gatsby-plugin-mdx`,
+    {
+      resolve: 'gatsby-plugin-mdx-frontmatter'
+    },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
