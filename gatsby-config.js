@@ -29,7 +29,15 @@ module.exports = {
         path: `${__dirname}/src/blog`,
       },
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          posts: require.resolve("./src/components/Posts-Page-Layout.js"),
+          default: require.resolve("./src/components/Posts-Page-Layout.js"),
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-mdx-frontmatter'
     },
