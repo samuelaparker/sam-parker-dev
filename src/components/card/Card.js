@@ -4,6 +4,7 @@ import styled from 'styled-components'
 export default function Card({ firstName, lastName, thumbnail, location }) {
 
     return (
+    <CardContainer>
         <StyledItem>
             <StyledThumbnailWrapper>
                 <StyledThumbnail src={thumbnail} alt="thumbnail" />
@@ -12,21 +13,29 @@ export default function Card({ firstName, lastName, thumbnail, location }) {
             <h2>{firstName}</h2>
             <p>{location.city}, {location.state}</p>
         </StyledItem>
+    </CardContainer>
     )
 }
-//
-//
-// const CardStyled = styled.div`
-//     background-color: lightgrey;
-//     cursor: pointer;
-//     margin-bottom: 0,5rem;
-//     padding: 0,5rem 1 rem;
-//     max-width: 300px;
-//     border-radius: 3px;
-//     box-shadow: #091e4240 0px 1px 0px 0px;
-//`
+
+
+
+
+const CardContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 3em;
+`
+
 const StyledItem = styled.div`
-  padding: 1.35rem;
+  width: 22em;
+  height: 22em;
+  padding: 2em;;
+  display: block;
+  @media (max-width: 768px) {
+    
+
+  }
   border-radius: 4px;
   border: 1rem solid;
   cursor: grab;

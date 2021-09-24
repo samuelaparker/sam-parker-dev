@@ -45,10 +45,13 @@ const GridExperiment = () => {
       <Helmet
         title='grid-experiment'>
       </Helmet>
-      <div>
+      <Wrapper>
+        
+        <StyledFlexGrid>
+        <TextWrapper>
         <h1>Grid Experiment</h1>
-        <p>This is an experiment in responsive grid layout without media queries that uses Math() functions. Each card pulls data from a random person API. </p>
-        <StyledGrid>
+        <p>This is a responsive grid made with flexbox. Each card pulls data from a random person API. </p>
+        </TextWrapper>
           {personData.map(person => (
             <Card
               key={person.dob.date}
@@ -58,9 +61,9 @@ const GridExperiment = () => {
               {...person}
             ></Card>
           ))}
-        </StyledGrid>
+        </StyledFlexGrid>
         <Spacer></Spacer>
-      </div>
+      </Wrapper>
 
     </Layout>
   )
@@ -68,39 +71,25 @@ const GridExperiment = () => {
 
 export default GridExperiment
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  
+`
+const TextWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+`
 
-const StyledGrid = styled.div`
-  --gap: 20px;
-  --min-card-width: 30ch;
-  --cols: 3;
-  --preferred-value: ((var(--min-card-width) * var(--cols) - var(--gap) * 2) - 100%) * 999;
-  display: grid;
-  gap: var(--gap);
 
-  /* Using min() */
-  grid-template-columns:
-    repeat(
-      auto-fit,
-      minmax(
-        min(
-          var(--preferred-value),
-          100%),
-        1fr
-      )
-    );
-
-  /* Using clamp() */
-  grid-template-columns:
-    repeat(
-      auto-fit,
-      minmax(
-        clamp(
-          33.3333% - var(--gap),
-          var(--preferred-value),
-          100%),
-        1fr
-      )
-    );
+const StyledFlexGrid = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
 `
 const Spacer = styled.div`
    height: 9rem;
