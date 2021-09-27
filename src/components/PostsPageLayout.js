@@ -6,7 +6,7 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" 
 import Layout from "./layout"
-import components from "./mdxComponents"
+
 import styled from "styled-components"
 
  function PostsPageLayout({ data }) {
@@ -26,7 +26,7 @@ import styled from "styled-components"
 //     }
 //   }
 // `)
-
+console.log(data)
    
   return (
     <>
@@ -41,9 +41,9 @@ import styled from "styled-components"
           }}
         >{`${data.mdx.frontmatter.date} by ${data.mdx.frontmatter.author}`}</h4>
         </div>
-        <MDXProvider components={components}>
+        
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
-        </MDXProvider>
+        
       </div>
         <Spacer />
     </Layout>

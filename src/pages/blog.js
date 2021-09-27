@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 import styled from "styled-components"
 
 
-
 const BlogIndex = ({ data }) => {
   const { edges: posts } = data.allMdx
   console.log(data)

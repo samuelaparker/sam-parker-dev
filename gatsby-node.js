@@ -32,7 +32,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create blog post pages.
   const posts = result.data.allMdx.edges
   
-  console.log(`posts`)
+  console.log(posts)
   
 
   // you'll call `createPage` for each result
