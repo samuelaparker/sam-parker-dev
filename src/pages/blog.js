@@ -9,7 +9,7 @@ import styled from "styled-components"
 
 const BlogIndex = ({ data }) => {
   const { edges: posts } = data.allMdx
-  
+  console.log(data)
   return (
     <Layout pageTitle="Blog">
     <BlogListWrapper>
