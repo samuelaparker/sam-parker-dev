@@ -9,7 +9,7 @@ import Layout from "./layout"
 
 import styled from "styled-components"
 
- function PostsPageLayout({ data }) {
+ function PostsPageLayout({ data }) { 
 
 //   const data = useStaticQuery(graphql`
 //   query BlogPostQuery($id: String) {
