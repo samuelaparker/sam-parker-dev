@@ -1,10 +1,10 @@
-import * as React from 'react'
-import Layout from '../components/layout'
-import { Helmet } from 'react-helmet';
-import { StaticImage } from 'gatsby-plugin-image'
-import styled from 'styled-components';
-import Footer from '../components/footer'
-import { navigate } from "gatsby"
+import * as React from "react";
+import Layout from "../components/layout";
+import { Helmet } from "react-helmet";
+import { StaticImage } from "gatsby-plugin-image";
+import styled from "styled-components";
+import Footer from "../components/footer";
+import { navigate } from "gatsby";
 
 /*
 NOTE RE StaticImage plugin:
@@ -14,69 +14,81 @@ components in the source, and passing them to a function means this is not possi
 */
 
 const IndexPage = () => {
-
   function handleFirstImageClick(e) {
-    e.preventDefault()
-    navigate("/grid-experiment")
+    e.preventDefault();
+    navigate("/grid-experiment");
   }
   function handleSecondImageClick(e) {
-    e.preventDefault()
-    navigate("/blog/first-post")
+    e.preventDefault();
+    navigate("/blog/first-post");
   }
 
   return (
     <Layout pageTitle="Home">
       <Helmet
-        title='Sam Parker / Samuel Parker - Developer'
+        title="Sam Parker / Samuel Parker - Developer"
         meta={[
           {
-            name: 'Samuel Parker',
-            content: 'Portfolio - samparker.dev',
+            name: "Samuel Parker",
+            content: "Portfolio - samparker.dev",
           },
           {
-            name: 'Sam Parker',
-            content:
-              'Sam Parker - samuelaparker - Front End Developer',
+            name: "Sam Parker",
+            content: "Sam Parker - samuelaparker - Front End Developer",
           },
-        ]}>
-      </Helmet>
+        ]}
+      ></Helmet>
       <LayoutWrapper>
         <p></p>
-        </LayoutWrapper>
+      </LayoutWrapper>
       <div>
-        <StaticImage style={imageStyle}
-          src="..//assets/images/maine-coast.jpeg"
-          alt="photo of the Maine coast."
-          onClick={handleFirstImageClick}
-        />
-        <StaticImage style={imageStyle}
-          src="../assets/images/karl-magnuson-oFB97KdJBFk-unsplash.jpg"
-          alt="photo of a beautiful lake in Maine."
-          onClick={handleSecondImageClick}
-        />
+        <StyledImageBorder>
+          <StaticImage
+            style={imageStyle}
+            src="..//assets/images/maine-coast.jpeg"
+            alt="photo of the Maine coast."
+            onClick={handleFirstImageClick}
+          />
+        </StyledImageBorder>
+        <StyledImageBorder>
+          <StaticImage
+            style={imageStyle}
+            src="../assets/images/karl-magnuson-oFB97KdJBFk-unsplash.jpg"
+            alt="photo of a beautiful lake in Maine."
+            onClick={handleSecondImageClick}
+          />
+        </StyledImageBorder>
       </div>
       <Spacer>
-      <Footer />
+        <Footer />
       </Spacer>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 const imageStyle = {
-  marginTop: '1em',
-  borderRadius: '50%',
-  cursor: 'pointer',
-}
+  webkitBorderRadius: "50%",
+  mozBorderRadius: "50%",
+  borderRadius: "50%",
+  khtmlBorderRadius: "50%",
+  cursor: "pointer",
+};
+
+const StyledImageBorder = styled.div`
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -khtml-border-radius: 50%;
+`;
 
 const LayoutWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
 
 const Spacer = styled.div`
-   height: 9rem;
-   `;
-   
+  height: 9rem;
+`;
