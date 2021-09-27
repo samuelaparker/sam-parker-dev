@@ -8,7 +8,7 @@ import Layout from "../components/layout"
 import components from "../components/mdxComponents"
 import styled from "styled-components"
 
-export default function PageTemplate() {
+ function PageTemplate() {
 
   const data = useStaticQuery(graphql`
   query BlogPostQuery($id: String) {
@@ -50,6 +50,8 @@ console.log(data)
   )
   
 }
+
+export default PageTemplate;
 
 //When your site gets built, Gatsby will run your page query and pass the resulting data into your page component as a prop called data.
 // export const pageQuery = graphql`
