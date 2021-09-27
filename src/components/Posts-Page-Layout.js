@@ -4,8 +4,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" 
-import Layout from "../components/layout"
-import components from "../components/mdxComponents"
+import Layout from "./layout"
+import components from "./mdxComponents"
 import styled from "styled-components"
 
  function PageTemplate() {
@@ -29,7 +29,7 @@ console.log(data)
    
   return (
     <>
-    <Layout>
+    <Layout pageTitle={data.mdx.frontmatter.slug}>
       <div style={{ display: "flex", flexDirection: "column", maxWidth: "750px", margin: "auto"}}>
         <div style={{display: "flex", flexDirection: "column", margin: "auto"}}>
         <h1 >{data.mdx.frontmatter.title}</h1>

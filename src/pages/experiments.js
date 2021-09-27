@@ -6,7 +6,7 @@ import { globalColors } from '../assets/GlobalStyles'
 
 export default function Experiments() {
     return (
-        <Layout>
+        <Layout pageTitle='Experiments'>
             
             <StyledLink to='/grid-experiment'>Grid Experiment</StyledLink>
             
