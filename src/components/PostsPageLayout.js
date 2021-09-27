@@ -1,30 +1,31 @@
 
 //THIS FILE IS THE TEMPLATE FOR MDX FILES (BLOG POSTS)
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" 
 import Layout from "./layout"
 import components from "./mdxComponents"
 import styled from "styled-components"
 
- function PostsPageLayout() {
+ function PostsPageLayout({ data }) {
 
-  const data = useStaticQuery(graphql`
-  query BlogPostQuery($id: String) {
-    mdx(id: { eq: $id }) {
-      id
-      body
-      frontmatter {
-        title
-        date
-        author
-        slug
-        preview
-      }
-    }
-  }
-`)
+//   const data = useStaticQuery(graphql`
+//   query BlogPostQuery($id: String) {
+//     mdx(id: { eq: $id }) {
+//       id
+//       body
+//       frontmatter {
+//         title
+//         date
+//         author
+//         slug
+//         preview
+//       }
+//     }
+//   }
+// `)
 console.log(data)
    
   return (
@@ -54,21 +55,21 @@ console.log(data)
 export default PostsPageLayout;
 
 //When your site gets built, Gatsby will run your page query and pass the resulting data into your page component as a prop called data.
-// export const pageQuery = graphql`
-//   query BlogPostQuery($id: String) {
-//     mdx(id: { eq: $id }) {
-//       id
-//       body
-//       frontmatter {
-//         title
-//         date
-//         author
-//         slug
-//         preview
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query BlogPostQuery($id: String) {
+    mdx(id: { eq: $id }) {
+      id
+      body
+      frontmatter {
+        title
+        date
+        author
+        slug
+        preview
+      }
+    }
+  }
+`
  
 
 const Spacer = styled.div`
