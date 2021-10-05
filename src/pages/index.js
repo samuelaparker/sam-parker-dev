@@ -69,8 +69,8 @@ const IndexPage = () => {
 export default IndexPage;
 
 const imageStyle = {
-  webkitBorderRadius: "50%",
-  mozBorderRadius: "50%",
+  WebkitBorderRadius: "50%",
+  MozBorderRadius: "50%",
   borderRadius: "50%",
   khtmlBorderRadius: "50%",
   cursor: "pointer",

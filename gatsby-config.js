@@ -9,34 +9,22 @@ module.exports = {
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/images/`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/posts/`,
+        path: `${__dirname}/src/posts`,
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-page-creator",
-    //   options: {
-    //     path: `${__dirname}/src/blog`,
-    //   },
-    // },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: {
-          default: require.resolve("./src/components/PostsPageLayout.js"),
-        },
-      },
-    },
+   
     {
       resolve: 'gatsby-plugin-mdx-frontmatter'
     },
