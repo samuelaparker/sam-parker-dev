@@ -6,6 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 //blog posts are created with the gatsby File System Route API
 
+
 const BlogPost = ({ data }) => {
   let { title } = data.mdx.frontmatter;
   let { body } = data.mdx;
@@ -44,3 +45,4 @@ export const query = graphql`
     }
   }
 `;
+
