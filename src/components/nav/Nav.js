@@ -16,7 +16,7 @@ const Nav = ({ testProp }) => {
             <Middle open={open} />
             <Bottom open={open} />
           </Hamburger>
-          
+
         </HamburgerWrapper>
         <NavLinkItem
           testprop={testProp}
@@ -27,7 +27,7 @@ const Nav = ({ testProp }) => {
           Home
         </NavLinkItem>
         <NavLinkItem
-        style={{ color: globalColors.highlightGreen }}
+        
           testprop={testProp}
           to="https://www.samuelaparker.com/#portfolio-section"
           activeStyle={{ color: globalColors.brandGreen }}

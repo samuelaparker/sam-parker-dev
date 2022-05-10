@@ -12,7 +12,7 @@ const About = () => {
         this site which I built using Gatsby.
       </Paragraph>
       <Paragraph>
-        You can find me on &nbsp;
+        You can find me on&nbsp;
         <a
           style={{ textDecoration: "none" }}
           href="https://www.linkedin.com/in/samuelaparker/"
@@ -29,7 +29,7 @@ const About = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {" Github "}
+          {" Github. "}
         </a>
       </Paragraph>
       <Link to="/grid-experiment"></Link>
