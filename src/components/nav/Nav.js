@@ -26,6 +26,15 @@ const Nav = ({ testProp }) => {
           Home
         </NavLinkItem>
         <NavLinkItem
+        style={{ color: globalColors.highlightGreen }}
+          testprop={testProp}
+          to="https://www.samuelaparker.com/#portfolio-section"
+          activeStyle={{ color: globalColors.brandGreen }}
+          open={open}
+        >
+          Portfolio
+        </NavLinkItem>
+        <NavLinkItem
           to="/about"
           activeStyle={{ color: globalColors.brandGreen }}
           open={open}
@@ -69,7 +78,7 @@ const NavLinkWrapper = styled.li`
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
-  padding: 2rem;
+  padding-top: 2rem;
 
   @media (max-width: 920px) {
     overflow: hidden;

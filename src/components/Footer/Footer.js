@@ -41,9 +41,9 @@ const FooterWrapper = styled.footer`
     justify-content: center;
     align-items: center;
     background-color: #fff; */
-    padding-bottom: 2.5rem;    /* Footer height */
-    position: absolute;
-    bottom: 0;
+    
+    margin: 1em 0;   
+    position: block;
     width: 100%;
     
   `;

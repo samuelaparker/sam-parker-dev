@@ -62,7 +62,7 @@ const GridExperiment = () => {
             ></Card>
           ))}
         </StyledFlexGrid>
-        <Spacer></Spacer>
+        
       </Wrapper>
 
     </Layout>
@@ -91,7 +91,4 @@ const StyledFlexGrid = styled.div`
   width: 100%;
   justify-content: center;
 `
-const Spacer = styled.div`
-   height: 9rem;
-   `;
 

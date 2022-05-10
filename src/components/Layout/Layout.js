@@ -59,6 +59,7 @@ const Container = styled.main`
     font-family: stratos, sans-serif;
     font-weight: 400;
     font-style: normal;
+    padding: 1em 2em;
 `;
 // const Heading = styled.h1`
 //     color: #529361;

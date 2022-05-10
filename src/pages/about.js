@@ -54,6 +54,7 @@ const Paragraph = styled.p`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-bottom: 1em;
 `;
 
 const Spacer = styled.div`

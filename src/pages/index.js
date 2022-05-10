@@ -59,9 +59,7 @@ const IndexPage = () => {
           />
         </StyledImageBorder>
       </div>
-      <Spacer>
-        <Footer />
-      </Spacer>
+  
     </Layout>
   );
 };
@@ -81,14 +79,11 @@ const StyledImageBorder = styled.div`
   -moz-border-radius: 50%;
   border-radius: 50%;
   -khtml-border-radius: 50%;
+  margin: 0.5em 0;
 `;
 
 const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-`;
-
-const Spacer = styled.div`
-  height: 9rem;
 `;

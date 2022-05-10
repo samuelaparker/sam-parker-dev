@@ -4,6 +4,7 @@ import React from 'react';
 
 export const globalColors = {
     brandGreen: '#529361',
+    highlightGreen: 'hsl(215deg 52% 67%)',
 }
 
 
@@ -35,5 +36,12 @@ export const GlobalStyle = createGlobalStyle`
   }
   html {
     margin: 0;  
+  }
+
+  p {
+    padding-bottom: 1rem;
+  }
+  h1, {
+    padding-bottom: 0.5em;
   }
 `
