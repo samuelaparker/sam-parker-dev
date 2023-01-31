@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 const About = () => {
+
   return (
     <Layout pageTitle="About Me">
       <Paragraph>
