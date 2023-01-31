@@ -8,34 +8,34 @@ import { GlobalStyle } from '../../assets/GlobalStyles'
 
 const Layout = ({ pageTitle, children }) => {
 
-    const data = useStaticQuery(graphql`
-    query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-        siteBuildMetadata {
-          buildTime
-        }
-      }`);
-      
 
-    return (
-        <Container>
-          <GlobalStyle />
-            <Helmet>
-                <title>{`${pageTitle}`} | {`${data.site.siteMetadata.title}`}</title>
-            </Helmet>
-            {/* <p className={`${siteTitle}  ${layoutWrapper}`}>{data.site.siteMetadata.title}</p> */}
-            <StyledTitle>{data.site.siteMetadata.title}</StyledTitle>
-            <Nav />
-            <Spacer1 />
-            {children}
-            <Footer />
-       </Container>
-    )
+  // const data = useStaticQuery(graphql`
+  // query MyQuery {
+  //   site {
+  //     id
+  //     siteMetadata {
+  //       title
+  //     }
+  //   }
+  // }
+  // `)
+
+
+  return (
+    <Container>
+      <GlobalStyle />
+      <Helmet>
+        <title>{`${pageTitle}`} | {`${'Hello, I\'m Sam Parker'}`}</title>
+      </Helmet>
+      <StyledTitle>{'Hello, I\'m Sam Parker'}</StyledTitle>
+      <Nav />
+      <Spacer1 />
+      {children}
+      <Footer />
+    </Container>
+  )
 }
+
 
 export default Layout
 

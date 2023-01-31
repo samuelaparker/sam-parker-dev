@@ -8,8 +8,10 @@ const About = () => {
   return (
     <Layout pageTitle="About Me">
       <Paragraph>
-        Hi, my name is Sam Parker. I'm a developer in NYC and I'm the creator of
-        this site which I built using Gatsby.
+        Hi, my name is Sam Parker.
+      </Paragraph>
+      <Paragraph>
+        Over the past 3 years, I've worked on diverse client projects including marketing websites for software development agencies and fintech web applications. I’ve honed my skills in Javascript, HTML, CSS, React, and Typescript and am always deepening my knowledge of software engineering. I value clean code and efficient teamwork. My multidisciplinary background equips me to handle new challenges and I enjoy collaborating and learning from talented colleagues.
       </Paragraph>
       <Paragraph>
         You can find me on&nbsp;
@@ -37,7 +39,7 @@ const About = () => {
         style={image}
         src="../assets/images/IMG_6633.JPG"
         alt="photo of a beautiful lake in Maine."
-        // onClick={() => {<Link to="/grid-experiment" />}}
+      // onClick={() => {<Link to="/grid-experiment" />}}
       />
       <Spacer />
     </Layout>
@@ -53,7 +55,7 @@ const image = {
 const Paragraph = styled.p`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   padding-bottom: 1em;
 `;
 
