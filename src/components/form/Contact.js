@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import { useState } from "react"
+import * as React from 'react'
 import axios from "axios";
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
@@ -84,14 +85,14 @@ const Contact = () => {
                 <StyledTextArea name="message" id="message" rows="5" />
                 <FormButton onClick={executeCaptcha} type="submit">Send</FormButton>
             </FormLabel>
-            
+
             <RecaptchaStyled
                 ref={e => recaptchaInstance = e}
                 sitekey="6LdHi4cbAAAAAFteU3kk_PHpOdij6TzG_5J_um1Q"
                 size="invisible"
                 verifyCallback={verifyCallback}
             />
-               
+
         </ContactFormWrapper>
     )
 }

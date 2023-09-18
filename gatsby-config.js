@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Hello, I'm Sam Parker",
   },
-  
+
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -18,6 +18,7 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,9 +26,9 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
-   
+
     {
-      resolve: 'gatsby-plugin-mdx-frontmatter'
+      resolve: "gatsby-plugin-mdx-frontmatter",
     },
     {
       resolve: "gatsby-plugin-web-font-loader",
@@ -40,10 +41,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-recaptcha`,
       options: {
-         async: false,
-         defer: false,
-         args: ``,
+        async: false,
+        defer: false,
+        args: ``,
       },
-   },
+    },
   ],
 };

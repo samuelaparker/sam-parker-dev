@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import Nav from '../nav'
 
 
@@ -22,13 +22,13 @@ const Template = (args) => <Nav {...args} />;
 
 
 export const Primary = Template.bind({});
-  Primary.args = {
-    testProp: 'dingus',
-  }
-  export const Secondary = Template.bind({});
-  Secondary.args = {
-    testProp: 'mcgee',
-  }
+Primary.args = {
+  testProp: 'dingus',
+}
+export const Secondary = Template.bind({});
+Secondary.args = {
+  testProp: 'mcgee',
+}
 
 
 // export const Mobile = Template.bind({});

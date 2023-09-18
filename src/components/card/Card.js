@@ -1,19 +1,19 @@
-import React from 'react'
+import * as React from 'react'
 import styled from 'styled-components'
 
 export default function Card({ firstName, lastName, thumbnail, location }) {
 
     return (
-    <CardContainer>
-        <StyledItem>
-            <StyledThumbnailWrapper>
-                <StyledThumbnail src={thumbnail} alt="thumbnail" />
-            </StyledThumbnailWrapper>
-            <h1>{lastName}</h1>
-            <h2>{firstName}</h2>
-            <p>{location.city}, {location.state}</p>
-        </StyledItem>
-    </CardContainer>
+        <CardContainer>
+            <StyledItem>
+                <StyledThumbnailWrapper>
+                    <StyledThumbnail src={thumbnail} alt="thumbnail" />
+                </StyledThumbnailWrapper>
+                <h1>{lastName}</h1>
+                <h2>{firstName}</h2>
+                <p>{location.city}, {location.state}</p>
+            </StyledItem>
+        </CardContainer>
     )
 }
 

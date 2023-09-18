@@ -58,7 +58,6 @@ const IndexPage = () => {
           />
         </StyledImageBorder>
       </div>
-  
     </Layout>
   );
 };

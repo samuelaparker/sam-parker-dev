@@ -1,16 +1,16 @@
-import React from 'react'
+import * as React from 'react'
 import { GrGatsbyjs } from 'react-icons/gr';
 import styled from 'styled-components';
 
 const Footer = () => {
 
-    return (
-        <FooterWrapper>
-            <FooterText><GatsbyIcon />  This site was created using Gatsby
-            </FooterText>
-            
-        </FooterWrapper>
-    )
+  return (
+    <FooterWrapper>
+      <FooterText><GatsbyIcon />  This site was created using Gatsby
+      </FooterText>
+
+    </FooterWrapper>
+  )
 }
 
 export default Footer;
@@ -55,7 +55,7 @@ const FooterText = styled.p`
   text-align: center;
   `;
 
- const GatsbyIcon = styled(GrGatsbyjs)`
+const GatsbyIcon = styled(GrGatsbyjs)`
     height: 20px;
     width: 20px;
     padding-left: 5px;

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import * as React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { globalColors } from "../../assets/GlobalStyles";
@@ -16,7 +17,6 @@ const Nav = ({ testProp }) => {
             <Middle open={open} />
             <Bottom open={open} />
           </Hamburger>
-
         </HamburgerWrapper>
         <NavLinkItem
           testprop={testProp}
@@ -26,15 +26,13 @@ const Nav = ({ testProp }) => {
         >
           Home
         </NavLinkItem>
-        <NavLinkItem
-        
+        <NavLinkItemExternal
           testprop={testProp}
           to="https://www.samuelaparker.com/#portfolio-section"
-          activeStyle={{ color: globalColors.brandGreen }}
           open={open}
         >
           Portfolio
-        </NavLinkItem>
+        </NavLinkItemExternal>
         <NavLinkItem
           to="/about"
           activeStyle={{ color: globalColors.brandGreen }}
@@ -42,13 +40,13 @@ const Nav = ({ testProp }) => {
         >
           About
         </NavLinkItem>
-        <NavLinkItem
+        {/* <NavLinkItem
           to="/blog"
           activeStyle={{ color: globalColors.brandGreen }}
           open={open}
         >
           Blog
-        </NavLinkItem>
+        </NavLinkItem> */}
         <NavLinkItem
           to="/contact"
           activeStyle={{ color: globalColors.brandGreen }}
@@ -100,6 +98,28 @@ const NavLinkItem = styled((props) => <Link {...props} />)`
   &:hover {
     color: rgb(92, 92, 92);
   }
+  @media (max-width: 920px) {
+    flex-direction: ${({ open }) => (open ? "column" : "none")};
+    display: ${({ open }) => (open ? "block" : "none")};
+    align-items: ${({ open }) => (open ? "stretch" : "center")};
+  }
+`;
+
+const NavLinkItemExternal = styled((props) => <a {...props} />)`
+  padding-right: 2rem;
+  font-size: clamp(0.8rem, 8vw, 1.7rem);
+  font-family: stratos, sans-serif;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    color: rgb(92, 92, 92);
+  }
+
+  &:active {
+    color: ${globalColors.brandGreen};
+  }
+
   @media (max-width: 920px) {
     flex-direction: ${({ open }) => (open ? "column" : "none")};
     display: ${({ open }) => (open ? "block" : "none")};

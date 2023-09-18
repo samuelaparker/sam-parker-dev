@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import Layout from '../components/layout'
 import Card from '../components/card'
 import { Helmet } from 'react-helmet';
@@ -38,7 +38,7 @@ const GridExperiment = () => {
       });
   }, []);
 
-  
+
   console.log('personData:', personData)
   return (
     <Layout>
@@ -46,12 +46,12 @@ const GridExperiment = () => {
         title='grid-experiment'>
       </Helmet>
       <Wrapper>
-        
+
         <StyledFlexGrid>
-        <TextWrapper>
-        <h1>Grid Experiment</h1>
-        <p>This is a responsive grid made with flexbox. Each card pulls data from a random person API. </p>
-        </TextWrapper>
+          <TextWrapper>
+            <h1>Grid Experiment</h1>
+            <p>This is a responsive grid made with flexbox. Each card pulls data from a random person API. </p>
+          </TextWrapper>
           {personData.map(person => (
             <Card
               key={person.dob.date}
@@ -62,7 +62,7 @@ const GridExperiment = () => {
             ></Card>
           ))}
         </StyledFlexGrid>
-        
+
       </Wrapper>
 
     </Layout>

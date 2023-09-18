@@ -1,10 +1,10 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import { Link } from 'gatsby'
-import React from 'react';
+import * as React from 'react'
 
 export const globalColors = {
-    brandGreen: '#529361',
-    highlightGreen: 'hsl(215deg 52% 67%)',
+  brandGreen: '#529361',
+  highlightGreen: 'hsl(215deg 52% 67%)',
 }
 
 
